@@ -1,0 +1,48 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+ 
+  
+  .hoverLink {
+    background-image: linear-gradient(
+      to right,
+      #DA0037,
+      #DA0037 50%,
+      #ededed 50%
+    );
+    background-size: 200% 100%;
+    background-position: -100%;
+    display: inline-block;
+    position: relative;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease-in-out;
+  }
+  
+   .hoverLink::before{
+    content: '';
+    background: #DA0037;
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 0;
+    height: 3px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .hoverLink:hover {
+   background-position: 0;
+  }
+  
+  .hoverLink:hover::before{
+    width: 100%;
+  } 
+  
+  h1 {
+    @apply text-center text-[#ededed]  font-black;
+  } 
+ 
+  .active{
+    transform: translateY(calc(-1* var(--nav-height)));
+    box-shadow: none;
+  }

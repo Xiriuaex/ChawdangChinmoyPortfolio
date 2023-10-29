@@ -1,0 +1,33 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+  .aboutSection{ 
+      background-color: #171717; 
+      height: 60vh; 
+      width: 78vw;  
+  }
+
+  .aboutMe > p { 
+      font-family: 'Lato';   
+  }   
+
+  @media screen and (max-width: 900px) {
+      .aboutSection{   
+        margin-top: 25vh; 
+        width: 80vw;
+        height: 50vh;
+      } 
+  }
+
+  @media screen and (max-width: 450px) {
+    .aboutSection{   
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin: auto;
+      margin-top: 17vh; 
+      width: 80vw;
+      height: 55vh;
+    } 
+  }

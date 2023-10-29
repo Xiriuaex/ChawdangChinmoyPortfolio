@@ -1,0 +1,92 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+ 
+
+
+.workSection{
+  background-color: #171717; 
+  height: 60vh; 
+  width: 80vw; 
+  
+}
+.title { 
+    font-family: 'Lato'; 
+    font-weight: 400;
+}
+
+
+/* Swiper CSS */
+ 
+   .mySwiper{
+    width: 40vw;
+    height: 70vh;  
+    position: relative;
+   }
+   
+   .mySwiper > .swiper-slide {  
+    position: absolute;
+    object-fit: fill;  
+    border-radius: 30px;
+  } 
+   .mySwiper > .btns{
+      width: 100px;
+      background-color: #DA0037;
+      z-index: inherit;
+      position: relative;
+   }
+  .mySwiper > .swiper-button-prev, .mySwiper > .swiper-button-next {  
+    @apply absolute text-[#ededed]  rotate-90 opacity-[.5] hover:opacity-[1] h-[100px] w-[30px] mt-[23vh]; 
+  }
+
+  .mySwiper > .swiper-button-next{  
+    margin-right: 18vw;
+  }
+  .mySwiper > .swiper-button-prev{ 
+    margin-top: 18vh;
+    margin-left: 18vw;
+  }
+
+
+  @media screen and (max-width: 900px) {
+    .workSection{   
+      margin-top: 25vh; 
+      width: 80vw;
+      height: 50vh;
+    } 
+    .mySwiper{
+      width: 40vw;
+      height: 60vh; 
+     }
+    .swiper-slide {  
+      width: 40vw;
+      height: 35vh;
+    } 
+    
+}
+
+  @media screen and (max-width: 700px) {
+  .mySwiper{
+    width: 45vw; 
+    height: 50vh;
+   }
+  .swiper-slide {  
+    height: 25vh;
+    width: 45vw;
+  } 
+} 
+
+@media screen and (max-width: 450px) {
+  .workSection{   
+    margin: auto;
+    margin-top: 17vh; 
+    width: 80vw;
+    height: 45vh;
+  } 
+  .mySwiper{
+    width: 55vw; 
+   }
+  .swiper-slide { 
+    width: 55vw; 
+    height: 30vh;
+  } 
+} 
