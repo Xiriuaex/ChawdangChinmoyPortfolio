@@ -3,7 +3,7 @@ import '../styles/Aboutme.css';
 
 const AboutMe = () => {
   return ( 
-    <div className='aboutSection mt-[26vh] ml-[22vw] flex flex-row justify-between items-center  opacity-95'> 
+    <div className='aboutSection mt-[26vh] ml-[22vw] flex flex-row justify-between items-center  opacity-90'> 
           
         <div className='aboutMe mx-auto'>
             <p className='text-[#666666] font-light  mobile:text-3xl tablet:text-4xl laptop:text-6xl'>About Me</p>

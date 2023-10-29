@@ -9,70 +9,50 @@
   width: 80vw; 
   
 }
+
 .title { 
     font-family: 'Lato'; 
     font-weight: 400;
 }
 
+img{
+  width: 40vw;
+  height: 50vh;
+}
 
-/* Swiper CSS */
- 
-   .mySwiper{
-    width: 40vw;
-    height: 70vh;  
-    position: relative;
-   }
-   
-   .mySwiper > .swiper-slide {  
-    position: absolute;
-    object-fit: fill;  
-    border-radius: 30px;
-  } 
-   .mySwiper > .btns{
-      width: 100px;
-      background-color: #DA0037;
-      z-index: inherit;
-      position: relative;
-   }
-  .mySwiper > .swiper-button-prev, .mySwiper > .swiper-button-next {  
-    @apply absolute text-[#ededed]  rotate-90 opacity-[.5] hover:opacity-[1] h-[100px] w-[30px] mt-[23vh]; 
-  }
+.video-overlay {
+  position: fixed; 
+  top: 10vh;
+  right: 10%;
+  width: 80%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
 
-  .mySwiper > .swiper-button-next{  
-    margin-right: 18vw;
-  }
-  .mySwiper > .swiper-button-prev{ 
-    margin-top: 18vh;
-    margin-left: 18vw;
-  }
-
+.close-button {
+  position: relative;
+  top: 10px;
+  right: 10px;
+  background: #fff;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
 
   @media screen and (max-width: 900px) {
     .workSection{   
       margin-top: 25vh; 
       width: 80vw;
       height: 50vh;
-    } 
-    .mySwiper{
-      width: 40vw;
-      height: 60vh; 
-     }
-    .swiper-slide {  
-      width: 40vw;
-      height: 35vh;
-    } 
-    
+    }      
 }
 
   @media screen and (max-width: 700px) {
-  .mySwiper{
-    width: 45vw; 
-    height: 50vh;
-   }
-  .swiper-slide {  
-    height: 25vh;
-    width: 45vw;
-  } 
+ 
 } 
 
 @media screen and (max-width: 450px) {
@@ -82,11 +62,5 @@
     width: 80vw;
     height: 45vh;
   } 
-  .mySwiper{
-    width: 55vw; 
-   }
-  .swiper-slide { 
-    width: 55vw; 
-    height: 30vh;
-  } 
+ 
 } 

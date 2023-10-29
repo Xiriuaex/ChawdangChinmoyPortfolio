@@ -1,0 +1,60 @@
+
+
+
+   img{
+    width: 40vw;
+    height: 50vh;
+  }
+
+  .videos > .vidCard > .named{
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;  
+  }
+ 
+  .vidCard{  
+    transition: transform .4s ease-in-out;
+    opacity: 1;
+    backface-visibility: hidden;
+  }
+
+  .vidCard:hover{
+    transform: scale(.9); 
+    .named {
+        opacity: 1;
+    }
+  }
+
+
+
+  .video-overlay {
+    position: fixed; 
+    top: 5vh;
+    bottom: 5vh;
+    right: 5vw;
+    left: 5vw; 
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    color: #ededed62;
+   
+    font-size: 20px;
+    padding: 5px 15px; 
+    cursor: pointer;
+  }
+  .close-button:hover{
+    color: #ededed;
+  }

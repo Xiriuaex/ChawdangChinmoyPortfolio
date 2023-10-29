@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 
-//All layouts imports:
 import AboutMe from "@/app/layouts/AboutMe.jsx";
 import Contact from "@/app/layouts/Contact.jsx";
 import Header from "@/app/layouts/Header.jsx"; 
@@ -12,19 +11,16 @@ import Testimonials from "@/app/layouts/Testimonials.jsx";
 import BGvids from "@/app/layouts/BGvids.jsx";
 import Nav from "@/app/layouts/nav.jsx";
 
-//AOS imports:
+
 import Aos from "aos";
 import 'aos/dist/aos.css'
 
-
-//Parallax imports:
 import { Parallax, ParallaxLayer  } from "@react-spring/parallax";
 
 const Home = () => {
-
   useEffect(()=>{
     Aos.init({  
-      duration: 1500, 
+      duration: 500, 
     })
   }, []);
 

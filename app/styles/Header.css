@@ -41,8 +41,4 @@
   h1 {
     @apply text-center text-[#ededed]  font-black;
   } 
- 
-  .active{
-    transform: translateY(calc(-1* var(--nav-height)));
-    box-shadow: none;
-  }
+  

@@ -14,7 +14,7 @@ const Testimonials = () => {
   return (
     <div className='mt-[26vh] flex flex-col justify-between mx-40 items-center'> 
     <div className='test m-auto'>
-       <p className='text-[#0f0202] mobile:text-4xl tablet:text-5xl laptop:text-6xl'>Testimonials</p> 
+       <p className='text-[#ededed] mobile:text-4xl tablet:text-5xl laptop:text-6xl'>Testimonials</p> 
     </div>
     <div className='mt-[7vh]'>
       <Swiper  

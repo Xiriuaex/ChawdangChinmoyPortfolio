@@ -1,72 +1,69 @@
-'use client'
+import React, { useState } from 'react';
 
-//import icons:
-import {BsFillPlayFill, BsFillPauseFill} from "react-icons/bs";
-
-
-import React, { useRef, useState, useEffect } from 'react';
-// Import Swiper React components
+import ReactPlayer from 'react-player/lazy';
+ 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import { Autoplay, EffectCoverflow, Mousewheel } from 'swiper/modules';
 
 import '../styles/MyWork.css';
 
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
- 
-import vidSrc from "@/app/assets/videos/This.mp4";
-
-// import required modules
-import { EffectCoverflow, Pagination, Navigation} from 'swiper/modules';
-
 export default function App() { 
 
-   
-  const videoRef= useRef(); 
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [videoID, setVideoID] = useState('');
 
-  const vidArr=[vidSrc, vidSrc, vidSrc, vidSrc, vidSrc, vidSrc];
-  
+  const vidArr=['8znAaJYpqPs', 'mob4RkUFIAE', 'KwWUQAG0sKk', 'UYI6yhi4aTc', 'GLy4VKeYxD4' ];
+
+  const openVideoOverlay = (videoID) => {
+    setVideoID(videoID);
+    setShowOverlay(true);
+  };
+
+  const closeVideoOverlay = () => {
+    setVideoID('');
+    setShowOverlay(false);
+  };
+
   return (
     <>
       <Swiper
         effect={'coverflow'} 
         direction='vertical' 
-        grabCursor={false}
+        grabCursor={true}
         centeredSlides={true}
         slideToClickedSlide={false}
-        slidesPerView={2}   
+        slidesPerView={'auto'}   
         coverflowEffect={{
           rotate: 45,
           stretch: 0,
           depth: 300,
-          modifier: 1,
-          slideShadows: false,
+          modifier: 1, 
         }}     
         loop={true}  
-        navigation={{
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev"
-        }} 
-        spaceBetween={10} 
-        modules={[EffectCoverflow, Pagination, Navigation]}
-        className="mySwiper" 
+        autoplay={true}
+        mousewheel={true}
+        spaceBetween={1} 
+        modules={[EffectCoverflow, Mousewheel, Autoplay]}
+        style={{width:"49vw", height:"60vh"}}
+        className='mySwiper'
       > 
-        
-          <div className="swiper-button-next"></div>
-          <div className="swiper-button-prev"></div>
-        
-        
-        {vidArr.map((vid, i)=>{
+        {vidArr.map((vid)=>{
           return(
-            <SwiperSlide>
-              <video className="object-fill w-full h-full rounded-[30px]" src={vid} type="video/mp4" ref={videoRef}/>
+            <SwiperSlide style={{height:"50vh", width:"40vw" , left:"30px"}}>
+              <img onClick={() => openVideoOverlay(vid)} src={`http://img.youtube.com/vi/${vid}/0.jpg`} alt="thumbnail-load" />
             </SwiperSlide>  
           ) 
         })} 
-
       </Swiper>
+
+      {showOverlay && ( 
+        <div data-aos="zoom-in" className="video-overlay">
+            <ReactPlayer url={`https://www.youtube.com/embed/${videoID}`} light playing controls width={650} height={450}/>
+            <button className="close-button" onClick={closeVideoOverlay}>x</button>
+        </div>
+      )}
     </>
   );
 }
