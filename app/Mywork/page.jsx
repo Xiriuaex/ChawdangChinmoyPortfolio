@@ -44,9 +44,9 @@ return (
           <div className="videos w-full flex flex-row flex-wrap justify-evenly">
             {vidArr.map((vid)=>{
               return(
-                <div className="vidCard mt-12 mb-12">
-                  <img style={{width:'31vw', height:'43vh'}} onClick={() => openVideoOverlay(vid)} src={`http://img.youtube.com/vi/${vid}/0.jpg`} alt="thumbnail-load" />
-                  <div class="named">
+                <div onClick={() => openVideoOverlay(vid)} className="vidCard mt-12 mb-12">
+                  <img style={{width:'31vw', height:'43vh'}}  src={`http://img.youtube.com/vi/${vid}/0.jpg`} alt="thumbnail-load" />
+                  <div class="named w-full">
                     <div class="text">John Doe</div>
                   </div>
                 </div>
