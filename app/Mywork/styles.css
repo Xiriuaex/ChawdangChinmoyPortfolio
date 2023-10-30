@@ -1,22 +1,20 @@
 
-
-
-   img{
-    width: 40vw;
-    height: 50vh;
+  body{
+    background-image: url("../assets/3.jpg");
   }
 
   .videos > .vidCard > .named{
     transition:.5s ease-in-out;
     opacity: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: #080808a5;
+    position: relative;
+    bottom: 100%;
+    height: 43vh;
+    padding-top: 15px;
+    text-align: center;
+    background-color: #080808b7;
     color: #ededed; 
     font-size: 4rem;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%); 
+   
   }
  
   .vidCard{  
@@ -29,8 +27,6 @@
         opacity: 1;
     }
   }
-
-
 
   .video-overlay {
     position: fixed; 

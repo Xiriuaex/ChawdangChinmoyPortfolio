@@ -9,7 +9,7 @@ import "../styles/Header.css";
 
 const Nav = () => {
   return (
-      <nav className="bg-neutral-900 opacity-90 flex flex-row justify-evenly fixed w-full z-50">
+      <nav className="bg-neutral-900 opacity-90 flex flex-row justify-evenly w-full z-50">
       
           <span className='laptop:ml-8 tablet:ml-5 my-4 text-4xl'><Link href={"/"} className='hoverLink'>CHINMOY</Link></span>
           
