@@ -4,13 +4,13 @@
 
 
 .workSection{
-  background-color: #171717; 
+  background-image: linear-gradient(to right, #EDEDED, #7b7979, #444444);
   height: 60vh; 
   width: 80vw; 
   
 }
 
-.title { 
+.title {  
     font-family: 'Lato'; 
     font-weight: 400;
 }
@@ -20,12 +20,13 @@ img{
   height: 50vh;
 }
 
+
 .video-overlay {
   position: fixed; 
-  top: 10vh;
-  right: 10%;
-  width: 80%;
-  height: 100%;
+  top: 5vh;
+  bottom: 5vh;
+  right: 5vw;
+  left: 5vw; 
   background: rgba(0, 0, 0, 0.7);
   display: flex;
   justify-content: center;
@@ -34,14 +35,18 @@ img{
 }
 
 .close-button {
-  position: relative;
+  position: absolute;
   top: 10px;
-  right: 10px;
-  background: #fff;
-  padding: 5px 10px;
-  border: none;
+  right: 10px; 
+  color: #ededed62;
+  font-size: 20px;
+  padding: 5px 15px; 
   cursor: pointer;
 }
+.close-button:hover{
+  color: #ededed;
+}
+
 
   @media screen and (max-width: 900px) {
     .workSection{   

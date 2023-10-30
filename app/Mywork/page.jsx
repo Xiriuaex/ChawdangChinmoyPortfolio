@@ -41,11 +41,11 @@ return (
         
     <Parallax pages={1.34}> 
       <ParallaxLayer offset={0} speed={2.7}>
-      <div className='fixed top-0 z-50'>
+      <div className='fixed w-full top-0 z-50'>
           <Nav/> 
         </div>
         <div className='relative mt-40'>
-            <div className='heading text-center text-[#666666] mobile:text-3xl tablet:text-4xl laptop:text-6xl'>MY WORK</div>
+            <div className='heading text-center text-[#e2d7f1] mobile:text-3xl tablet:text-4xl laptop:text-6xl'>MY WORK</div>
             <div className="videos w-full flex flex-row flex-wrap justify-evenly">
               {vidArr.map((vid)=>{
                 return(

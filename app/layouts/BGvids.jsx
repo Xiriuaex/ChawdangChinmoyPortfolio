@@ -1,6 +1,6 @@
 import React from 'react'
 import vidSrc from "@/app/assets/videos/This.mp4";
-import imgSrc from "@/app/assets/3.jpg";
+import imgSrc from "@/app/assets/7.jpg";
 import Image from 'next/image';
 
 const BGvids = () => {

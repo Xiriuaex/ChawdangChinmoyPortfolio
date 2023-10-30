@@ -1,6 +1,6 @@
 
   body{
-    background-image: url("../assets/3.jpg");
+    background-image: url("../assets/7.jpg");
   }
 
   .videos > .vidCard > .named{
@@ -46,7 +46,6 @@
     top: 10px;
     right: 10px; 
     color: #ededed62;
-   
     font-size: 20px;
     padding: 5px 15px; 
     cursor: pointer;

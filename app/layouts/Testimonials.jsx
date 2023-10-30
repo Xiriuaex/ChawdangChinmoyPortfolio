@@ -18,13 +18,11 @@ const Testimonials = () => {
     </div>
     <div className='mt-[7vh]'>
       <Swiper  
-        loop={true}
-        mousewheel={true}
+        loop={true} 
         autoplay={{
           delay: 2500,
-          
         }} 
-        modules={[Navigation, Autoplay, Mousewheel]} 
+        modules={[Navigation, Autoplay]} 
         className="mySwiper rounded-2xl"
         >
           <SwiperSlide>This is Nice</SwiperSlide>

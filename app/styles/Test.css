@@ -32,9 +32,9 @@
     
     text-align: center;
     font-size: 2.3rem;
-    background-image: linear-gradient(to top,#0e0d0d, #0e0d0d); 
+    background-image: linear-gradient(to top, #EDEDED, #7b7979, #3a3a3a);
     opacity: .9;
-    color: #ededed;
+    color: #171717;
     border-radius: 1rem; 
     /* Center slide text vertically */
     display: flex;

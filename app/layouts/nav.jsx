@@ -17,7 +17,7 @@ const Nav = () => {
             <ul className='laptop:mr-8 tablet:mr-5 mobile:mr-2 my-7 flex flex-row space-x-8'>
                 <li><Link className='hoverLink' href={"/"}>Home</Link></li>
                 <li><Link className='hoverLink' href={"/Mywork"}>My Work</Link></li>
-                <li><Link className='hoverLink' href={"/About"}>About Myself</Link></li>
+                <li><Link className='hoverLink' href={"/Contact"}>Contact Me</Link></li>
             </ul>
           </div> 
       </nav> 
