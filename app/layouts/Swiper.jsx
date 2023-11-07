@@ -48,6 +48,11 @@ export default function App() {
         modules={[EffectCoverflow, Mousewheel, Autoplay]}
         style={{width:"49vw", height:"60vh"}}
         className='mySwiper'
+        breakpoints={{
+          540: {
+            
+          },
+        }}
       > 
         {vidArr.map((vid)=>{
           return(

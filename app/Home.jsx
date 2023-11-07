@@ -17,6 +17,12 @@ import 'aos/dist/aos.css'
 
 import { Parallax, ParallaxLayer  } from "@react-spring/parallax";
 
+export const metadata = {
+  title: 'Portfolio',
+  description: '',
+}
+
+
 const Home = () => {
   useEffect(()=>{
     Aos.init({  
@@ -29,12 +35,10 @@ const Home = () => {
         <Parallax pages={2.30}>
           <ParallaxLayer offset={0} speed={4}>
             <BGvids />
-          </ParallaxLayer>
-          <ParallaxLayer offset={0} speed={2.7}>
+          </ParallaxLayer> 
+          <ParallaxLayer offset={0} speed={1.7}>
             <Nav />
             <Header /> 
-          </ParallaxLayer>   
-          <ParallaxLayer offset={0.76} speed={1.7}>
             <MyWork/>
             <AboutMe/>
             <Testimonials/>

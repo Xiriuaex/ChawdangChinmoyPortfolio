@@ -48,24 +48,15 @@ img{
 }
 
 
-  @media screen and (max-width: 900px) {
+  @media screen and (max-width: 540px) {
     .workSection{   
-      margin-top: 25vh; 
-      width: 80vw;
+      margin-top: 50vh; 
+      width: 100vw;
       height: 50vh;
-    }      
+      flex-direction: column;
+    }     
 }
 
   @media screen and (max-width: 700px) {
- 
-} 
-
-@media screen and (max-width: 450px) {
-  .workSection{   
-    margin: auto;
-    margin-top: 17vh; 
-    width: 80vw;
-    height: 45vh;
-  } 
  
 } 

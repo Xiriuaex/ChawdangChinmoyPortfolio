@@ -15,11 +15,11 @@ module.exports = {
     },
     screens: {
 
-      'mobile': '300px',
-      // => @media (min-width: 300px) { ... }
+      'mobile': '200px',
+      // => @media (min-width: 200px) { ... }
 
-      'tablet': '640px',
-      // => @media (min-width: 640px) { ... }
+      'tablet': '540px',
+      // => @media (min-width: 540px) { ... }
 
       'laptop': '1024px',
       // => @media (min-width: 1024px) { ... }
