@@ -41,10 +41,3 @@
   h1 {
     @apply text-center text-[#ededed]  font-black;
   } 
-  
-
-  @media only screen and (max-width: 600px) {
-    .heading{
-        margin-top: 7rem;
-    }
-  }

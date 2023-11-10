@@ -2,32 +2,54 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
 
 
-  .aboutSection{
+  .aboutsec{
       background-image: linear-gradient(to right, #EDEDED, #7b7979, #444444);
-      height: 60vh; 
+      height: 55vh; 
       width: 78vw;  
+      margin-left: 22.5vh;
   }
 
-  .aboutMe > p { 
-      font-family: 'Lato';   
-  }   
-
-  @media screen and (max-width: 900px) {
-      .aboutSection{   
-        margin-top: 25vh; 
-        width: 80vw;
-        height: 50vh;
-      } 
+  .details{ 
+    margin: auto;
+    width: 40vw;
   }
 
-  @media screen and (max-width: 450px) {
-    .aboutSection{   
-      display: flex;
+  .aboutMe{ 
+    margin: auto;
+    font-family: 'Lato';   
+  }    
+  
+  @media screen and (max-width: 767px) {
+    .aboutsec{
+      margin-left: 0;
+      width: 100vw;
+      height: 50vh;
       flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      margin-top: 17vh; 
-      width: 80vw;
-      height: 55vh;
+    } 
+
+    .aboutMe{
+      margin-top: 15px; 
+    }
+    .details{
+      width: 90vw;
+      margin-bottom: 55px;
+    }
+  }
+
+  @media screen and (min-width:768px) and (max-width: 1023px) {
+    .aboutsec{
+      width: 78vw;
+      height: 55vh; 
+      margin-left: 25vh;
+    }
+    .details{ 
+      margin-right: 15px;
+      width: 50vw;
+    }
+  }
+
+  @media screen and (min-width: 1439px) {
+    .aboutsec{  
+      margin-left: 26vh;
     } 
   }

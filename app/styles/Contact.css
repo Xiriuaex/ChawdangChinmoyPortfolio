@@ -2,13 +2,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
  
-.link > a > p { 
-    font-family: 'Lato';
-    font-weight: 700; 
-    position: relative;
-    text-transform: uppercase;
-}   
-.link > a > p::before{ 
+  a > p { 
+      font-family: 'Lato';
+      font-weight: 700; 
+      position: relative;
+      text-transform: uppercase;
+  }   
+  a > p::before{ 
     content: 'HIRE\00a0ME\00a0➜';
     position:absolute;
     background-color: #DA0037;
@@ -19,6 +19,6 @@
     transition:all 0.5s;
   }
  
-  .link > a > p:hover:before{
+  a > p:hover:before{
     width:100%;
   }

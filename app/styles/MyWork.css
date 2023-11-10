@@ -1,13 +1,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
- 
-
 
 .workSection{
   background-image: linear-gradient(to right, #EDEDED, #7b7979, #444444);
-  height: 60vh; 
+  height: 55vh; 
   width: 80vw; 
-  
 }
 
 .title {  
@@ -19,7 +16,6 @@ img{
   width: 40vw;
   height: 50vh;
 }
-
 
 .video-overlay {
   position: fixed; 
@@ -43,20 +39,46 @@ img{
   padding: 5px 15px; 
   cursor: pointer;
 }
+
 .close-button:hover{
   color: #ededed;
 }
 
-
-  @media screen and (max-width: 540px) {
-    .workSection{   
-      margin-top: 50vh; 
-      width: 100vw;
-      height: 50vh;
-      flex-direction: column;
-    }     
+.swiperBlock{
+  width: 49vw !important;
+  height: 60vh !important;
 }
 
-  @media screen and (max-width: 700px) {
- 
+.swiperSlide{
+  width: 40vw !important;
+  height: 50vh !important;
+  margin: auto;
+}
+
+  @media screen and (max-width: 767px) {
+    .workSection{   
+      margin-top: 40vh; 
+      overflow: hidden;
+      width: 100vw;
+      height: 55vh;
+      flex-direction: column; 
+    }     
+
+    .title {
+      margin-top: 10px;
+      color: #EDEDED;
+    }
+    .swiperBlock{
+      width: 80vw !important;
+      height: 40vh !important;
+      margin-bottom: 15px;
+    }
+    .swiperSlide{
+      width: 80vw !important;
+      height: 40vh !important; 
+    }
+    .swiperSlide > img{
+      width: 80vw !important;
+      height: 40vh !important; 
+    }
 } 

@@ -9,6 +9,7 @@ import MyWork from "@/app/layouts/MyWork.jsx";
 import Footer from "@/app/layouts/Footer.jsx";
 import Testimonials from "@/app/layouts/Testimonials.jsx";
 import BGvids from "@/app/layouts/BGvids.jsx";
+import BGimg from "@/app/layouts/BGimg.jsx";
 import Nav from "@/app/layouts/nav.jsx";
 
 
@@ -32,13 +33,18 @@ const Home = () => {
 
   return (
     <div> 
-        <Parallax pages={2.30}>
-          <ParallaxLayer offset={0} speed={4}>
-            <BGvids />
-          </ParallaxLayer> 
-          <ParallaxLayer offset={0} speed={1.7}>
+        <Parallax pages={1.643}>
+          <ParallaxLayer className="z-50" offset={0} speed={5.3}>
             <Nav />
             <Header /> 
+          </ParallaxLayer> 
+          <ParallaxLayer offset={0} speed={2}>
+            <BGimg />
+          </ParallaxLayer>
+          <ParallaxLayer offset={0} speed={5.5}>
+            <BGvids />
+          </ParallaxLayer>
+          <ParallaxLayer offset={.83} speed={4.6}>
             <MyWork/>
             <AboutMe/>
             <Testimonials/>

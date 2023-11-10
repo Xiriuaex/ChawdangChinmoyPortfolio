@@ -5,7 +5,7 @@ import { BiLogoFacebookSquare, BiLogoInstagramAlt, BiLogoLinkedinSquare } from "
 
 const Footer = () => {
   return (
-    <div className='foot w-full bg-black text-[#6e6d6d] flex flex-col justify-between items-center'> 
+    <div className='footer w-full bg-black text-[#6e6d6d] flex flex-col justify-between items-center'> 
         <div className='upper_footer link flex flex-row justify-between mx-auto'>
             <div className='mb-6 mt-10'>
                 <p className='text-4xl text-center mb-3'>ChawdangChinmoy</p>

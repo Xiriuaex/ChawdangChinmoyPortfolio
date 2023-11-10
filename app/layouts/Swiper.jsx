@@ -45,18 +45,12 @@ export default function App() {
         autoplay={true}
         mousewheel={true}
         spaceBetween={1} 
-        modules={[EffectCoverflow, Mousewheel, Autoplay]}
-        style={{width:"49vw", height:"60vh"}}
-        className='mySwiper'
-        breakpoints={{
-          540: {
-            
-          },
-        }}
+        modules={[EffectCoverflow, Mousewheel, Autoplay]} 
+        className='swiperBlock'
       > 
         {vidArr.map((vid)=>{
           return(
-            <SwiperSlide style={{height:"50vh", width:"40vw" , left:"30px"}}>
+            <SwiperSlide className='swiperSlide'>
               <img onClick={() => openVideoOverlay(vid)} src={`http://img.youtube.com/vi/${vid}/0.jpg`} alt="thumbnail-load" />
             </SwiperSlide>  
           ) 

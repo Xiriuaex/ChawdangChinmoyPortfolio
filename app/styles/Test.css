@@ -1,13 +1,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
-  .test > p { 
+  .testTitle > p { 
     font-family: 'Lato';
     font-weight: 700; 
     position: relative;
     text-transform: uppercase;
 }   
-  .test > p::before{ 
+  .testTitle > p::before{ 
     content: 'TESTIMONIALS';
     position:absolute;
     background-color: #DA0037;
@@ -18,18 +18,16 @@
     transition:all 0.5s;
   }
  
-  .test > p:hover:before{
+  .testTitle > p:hover:before{
     width:100%;
   }
- 
- 
+
   .swiper {
-    width: 70vw;
-    height: 55vh;
+    width: 80vw;
+    height: 50vh;
   }
 
-  .swiper-slide {
-    
+  .swiper-slide { 
     text-align: center;
     font-size: 2.3rem;
     background-image: linear-gradient(to top, #EDEDED, #7b7979, #3a3a3a);
@@ -42,23 +40,9 @@
     align-items: center;
   }
 
-  
-    @media screen and (max-width: 900px) {
-      .aboutSection{   
-        margin-top: 25vh; 
-        width: 80vw;
-        height: 50vh;
-      } 
-  }
-
-  @media screen and (max-width: 450px) {
-    .aboutSection{   
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: auto;
-      margin-top: 17vh; 
-      width: 80vw;
-      height: 55vh;
-    } 
+  @media screen and (max-width: 767px) {
+    .swiper {
+      width: 90vw;
+      height: 40vh;
+    }
   }

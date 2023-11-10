@@ -12,18 +12,18 @@ import { Autoplay, Navigation, Mousewheel } from 'swiper/modules';
 
 const Testimonials = () => {
   return (
-    <div className='mt-[26vh] flex flex-col justify-between mx-40 items-center'> 
-    <div className='test m-auto'>
-       <p className='text-[#ededed] mobile:text-4xl tablet:text-5xl laptop:text-6xl'>Testimonials</p> 
-    </div>
-    <div className='mt-[7vh]'>
-      <Swiper  
-        loop={true} 
-        autoplay={{
-          delay: 2500,
-        }} 
-        modules={[Navigation, Autoplay]} 
-        className="mySwiper rounded-2xl"
+    <div className='testPart mt-[26vh] flex flex-col justify-between items-center'> 
+      <div className='testTitle m-auto'>
+        <p className='text-[#ededed] mobile:text-4xl tablet:text-5xl laptop:text-6xl'>Testimonials</p> 
+      </div>
+      <div className='mt-[7vh]'>
+        <Swiper  
+          loop={true} 
+          autoplay={{
+            delay: 2500,
+          }} 
+          modules={[Navigation, Autoplay]} 
+          className="mySwiper"
         >
           <SwiperSlide>This is Nice</SwiperSlide>
           <SwiperSlide>Awesome</SwiperSlide>
@@ -31,7 +31,7 @@ const Testimonials = () => {
           <SwiperSlide>YO YO honey singh</SwiperSlide>
           <SwiperSlide>Slide 5</SwiperSlide> 
         </Swiper>
-    </div>
+      </div>
   </div>
   )
 }

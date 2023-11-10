@@ -1,27 +1,22 @@
 
-@media screen and (min-width: 1281px) {
-    .foot{
-        margin-top: 44vh;
-    }
-}
 
-@media screen and (max-width: 1280px) {
-    .foot{
-        margin-top: 32vh;
-    }   
-}
+    .footer{
 
-@media screen and (max-width: 650px){
-    .foot{
-        margin-top: 38vh;
     }
-}
 
-@media screen and (max-width: 450px){
-    .foot{
-        margin-top: 53vh;
+    @media screen and (max-width:767px){
+        .footer{
+            margin-top: 38vh;
+        }
+        .footer > .upper_footer > h1{
+            font-size: 1px;
+        }
     }
-    .foot > .upper_footer > h1{
-        font-size: 1px;
+
+    @media screen and (min-width:768px) and (max-width: 1023px) {
+        
     }
-}
+
+    @media screen and (min-width: 1439px) {
+     
+    }
