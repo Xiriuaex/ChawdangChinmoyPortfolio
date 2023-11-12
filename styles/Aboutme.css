@@ -1,0 +1,42 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+  .aboutsec{
+    @apply relative h-[55vh] w-[80vw] m-auto mt-[30vh] flex flex-row justify-between items-center bg-gradient-to-tr from-[#EDEDED] via-[#7b7979] to-[#444444];
+  }
+
+  .details{ 
+    @apply m-auto w-[40vw];
+  }
+
+  .aboutMe{ 
+    margin: auto;
+    font-family: 'Lato';   
+  }    
+  
+  @media screen and (max-width: 540px) {
+    .aboutsec{
+      @apply w-full left-0 h-[50vh] flex-col;
+    } 
+
+    .aboutMe{
+      margin-top: 25px; 
+    }
+
+    .details{
+      width: 90vw;
+      margin-bottom: 55px;
+    }
+  }
+
+  @media screen and (min-width:768px) and (max-width: 1023px) {
+    .aboutsec{
+      width: 78vw;
+      height: 55vh;  
+    }
+    .details{ 
+      margin-right: 15px;
+      width: 50vw;
+    }
+  }

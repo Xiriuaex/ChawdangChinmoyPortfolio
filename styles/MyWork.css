@@ -1,0 +1,68 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
+
+  .workSection{
+    @apply relative h-[55vh] w-[80vw] mt-[30vh] flex flex-row justify-between items-center bg-gradient-to-t from-cyan-500 to-blue-500;
+  }
+
+  .title {
+      font-family: 'Lato'; 
+      font-weight: 400;
+  }
+
+  img{
+    @apply w-[40vw] h-[40vh];
+  }
+    
+  .swiperBlock{
+    @apply !w-[50vw] !h-[55vh];
+  }
+
+  .swiperSlide{
+    @apply !w-[40vw] !h-[40vh] m-auto;
+  }
+
+  .video-overlay {
+    position: fixed; 
+    top: 5vh;
+    bottom: 5vh;
+    right: 5vw;
+    left: 5vw; 
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px; 
+    color: #ededed62;
+    font-size: 20px;
+    padding: 5px 15px; 
+    cursor: pointer;
+  }
+
+  .close-button:hover{
+    color: #ededed;
+  }
+
+  @media screen and (max-width: 540px) {
+    .workSection{   
+      @apply mt-[25vh] overflow-hidden w-full flex-col;
+    } 
+
+    img{
+      @apply w-[80vw] h-[40vh];
+    }
+      
+    .swiperBlock{
+      @apply !w-[80vw] !h-[40vh] mb-[15px];
+    }
+  
+    .swiperSlide{
+      @apply !w-[80vw] !h-[40vh] m-auto;
+    }  
+  }

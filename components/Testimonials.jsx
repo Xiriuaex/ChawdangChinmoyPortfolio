@@ -1,5 +1,5 @@
-import React from 'react'
-import "../styles/Test.css";
+
+import "@/styles/Test.css";
  
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -8,15 +8,15 @@ import 'swiper/css';
 import 'swiper/css/navigation'; 
 
 // import required modules
-import { Autoplay, Navigation, Mousewheel } from 'swiper/modules';
+import { Autoplay, Navigation } from 'swiper/modules';
 
 const Testimonials = () => {
   return (
-    <div className='testPart mt-[26vh] flex flex-col justify-between items-center'> 
-      <div className='testTitle m-auto'>
+    <div className='testPart'> 
+      <div className='testTitle'>
         <p className='text-[#ededed] mobile:text-4xl tablet:text-5xl laptop:text-6xl'>Testimonials</p> 
       </div>
-      <div className='mt-[7vh]'>
+      <div className='mt-16'>
         <Swiper  
           loop={true} 
           autoplay={{

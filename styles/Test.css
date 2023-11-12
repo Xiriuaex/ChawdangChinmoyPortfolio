@@ -1,0 +1,47 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+
+
+  .testPart{
+    @apply  relative w-full mt-28 flex flex-col justify-between items-center;
+  }
+
+  .testTitle > p {
+    @apply font-bold uppercase;
+  }   
+  
+  .testTitle > p::before{
+    content: 'TESTIMONIALS';
+    position:absolute;
+    background-color: #DA0037;
+    top:0;
+    left:0;
+    width:0%; 
+    overflow:hidden;
+    transition:all 0.5s;
+  }
+ 
+  .testTitle > p:hover:before{
+    width:100%;
+  }
+
+  .swiper {
+    @apply w-[80vw] h-[55vh];
+  }
+
+  .swiper-slide {
+    font-size: 2.5rem;
+    background-image: linear-gradient(to top, #EDEDED, #7b7979, #3a3a3a);
+    opacity: .9;
+    color: #171717;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media screen and (max-width: 540px) {
+    .swiper { 
+      @apply h-[45vh];
+    }
+  }

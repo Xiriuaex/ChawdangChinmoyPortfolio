@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+
+import { useState } from 'react';
 
 import ReactPlayer from 'react-player/lazy';
  
@@ -7,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow, Mousewheel } from 'swiper/modules';
 
-import '../styles/MyWork.css';
+import '@/styles/MyWork.css';
 
 export default function App() { 
 

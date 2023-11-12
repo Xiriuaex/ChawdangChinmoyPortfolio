@@ -16,16 +16,16 @@ module.exports = {
     screens: {
 
       'mobile': '200px',
-      // => @media (min-width: 200px) { ... }
+      //(min-width: 200px)
 
       'tablet': '540px',
-      // => @media (min-width: 540px) { ... }
+      //(min-width: 540px)
 
       'laptop': '1024px',
-      // => @media (min-width: 1024px) { ... }
+      //(min-width: 1024px)
 
-      'desktop': '1280px',
-      // => @media (min-width: 1280px) { ... }
+      'desktop': '1025px',
+      //(min-width: 1280px)
     },
     fontFamily: {
       'sans': ['Lato', 'sans-serif'],

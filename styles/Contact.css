@@ -1,24 +1,25 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
 
- 
-  a > p { 
-      font-family: 'Lato';
-      font-weight: 700; 
-      position: relative;
+
+  .contactPart{
+    @apply relative flex flex-row justify-evenly mt-[17vw];
+  }
+
+  a > p {
+      font-weight: 700;  
       text-transform: uppercase;
+      margin: auto;
   }   
   a > p::before{ 
     content: 'HIRE\00a0ME\00a0➜';
     position:absolute;
-    background-color: #DA0037;
-    top:0;
-    left:0;
+    background-color: #DA0037;  
     width:0%; 
     overflow:hidden;
     transition:all 0.5s;
   }
  
   a > p:hover:before{
-    width:100%;
+    width:55vw;
   }

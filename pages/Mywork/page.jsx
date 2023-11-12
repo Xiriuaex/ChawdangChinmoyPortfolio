@@ -4,8 +4,8 @@ import React, { useState, useEffect } from 'react'
 
 import ReactPlayer from 'react-player';
 
-import Nav from '@/app/layouts/nav';
-import Footer from '@/app/layouts/Footer';
+import Nav from '@/components/nav';
+import Footer from '@/components/Footer';
 
 import { Parallax, ParallaxLayer  } from "@react-spring/parallax";
 

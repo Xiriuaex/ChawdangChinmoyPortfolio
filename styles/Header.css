@@ -1,7 +1,4 @@
  
- @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
- 
-  
   .hoverLink {
     background-image: linear-gradient(
       to right,
@@ -39,5 +36,23 @@
   } 
   
   h1 {
-    @apply text-center text-[#ededed]  font-black;
+    @apply text-center text-[#ededed] font-black;
   } 
+
+  .navbar{
+    @apply absolute top-0 bg-neutral-900 opacity-90 flex flex-row justify-evenly w-full;
+  }
+
+  .heading{
+    @apply absolute w-full my-[14rem] space-y-7;
+  }
+
+  .main_title{
+    @apply my-auto text-4xl;
+  }
+  
+  @media screen and (max-width: 540px) {
+    .main_title{
+      @apply my-4 text-3xl text-center;
+    }
+  }

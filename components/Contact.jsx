@@ -1,9 +1,9 @@
-import React from 'react'
-import "../styles/Contact.css";
+
+import "@/styles/Contact.css";
 
 const Contact = () => {
   return ( 
-      <div className='flex flex-row justify-evenly w-full mt-[20vh]'>
+      <div className='contactPart'>
         <a href = "mailto: pragyanchetia22@gmail.com">
           <p className='text-[#ededed] mobile:text-[3rem] tablet:text-[5rem] laptop:text-[8rem]'>Hire Me➜</p>
         </a>
