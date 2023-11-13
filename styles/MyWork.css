@@ -2,7 +2,7 @@
   @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap');
 
   .workSection{
-    @apply relative h-[55vh] w-[80vw] mt-[30vh] flex flex-row justify-between items-center bg-gradient-to-t from-cyan-500 to-blue-500;
+    @apply relative h-[55vh] mx-auto w-[80vw] mt-[30vh] flex flex-row justify-between items-center bg-gradient-to-br from-[#5f5f5f] to-[#c9c9c9];
   }
 
   .title {

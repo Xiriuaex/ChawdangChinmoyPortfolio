@@ -8,21 +8,6 @@
 
   .testTitle > p {
     @apply font-bold uppercase;
-  }   
-  
-  .testTitle > p::before{
-    content: 'TESTIMONIALS';
-    position:absolute;
-    background-color: #DA0037;
-    top:0;
-    left:0;
-    width:0%; 
-    overflow:hidden;
-    transition:all 0.5s;
-  }
- 
-  .testTitle > p:hover:before{
-    width:100%;
   }
 
   .swiper {

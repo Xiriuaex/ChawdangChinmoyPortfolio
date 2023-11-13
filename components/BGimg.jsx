@@ -1,12 +1,7 @@
 
-import imgSrc from "@/public/assets/7.jpg";
-import Image from 'next/image';
-
 const BGimg = () => {
   return (
-    <div>
-         <Image src={imgSrc} alt="camera-guy" className='absolute desktop:h-[410vh] laptop:h-[410vh] tablet:h-[380vh] mobile:h-[350vh] -z-50 w-full opacity-90'/>
-    </div>
+    <div className="bg-fixed bg-center bg-no-repeat bg-cover bg-[url('../public/assets/7.jpg')] absolute desktop:h-[400vh] laptop:h-[380vh] tablet:h-[320vh] mobile:h-[300vh] -z-50 w-full opacity-90"></div>
   )
 }
 

@@ -22,13 +22,13 @@ const Home = () => {
 
   return (
     <div>  
-      <Hero/> 
-      <BGimg /> 
-      <MyWork/>
-      <AboutMe/>
-      <Testimonials/>
-      <Contact/>
-      <Footer/>
+      <Hero/>  
+        <BGimg />  
+        <MyWork/>
+        <AboutMe/>
+        <Testimonials/>
+        <Contact/>
+        <Footer/> 
     </div>
   )
 }

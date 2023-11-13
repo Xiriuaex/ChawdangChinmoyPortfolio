@@ -7,8 +7,6 @@ import ReactPlayer from 'react-player';
 import Nav from '@/components/nav';
 import Footer from '@/components/Footer';
 
-import { Parallax, ParallaxLayer  } from "@react-spring/parallax";
-
 import Aos from "aos";
 import 'aos/dist/aos.css'
 
@@ -37,11 +35,8 @@ const page = () => {
   }, []);
 
 return (
-  <div className='mainDiv'>
-        
-    <Parallax pages={1.34}> 
-      <ParallaxLayer offset={0} speed={2.7}>
-      <div className='fixed w-full top-0 z-50'>
+  <div className='mainDiv'> 
+      <div className='w-full top-0 z-50'>
           <Nav/> 
         </div>
         <div className='relative mt-40'>
@@ -67,9 +62,7 @@ return (
         </div>  
         <div className='absolute w-full'>
           <Footer/>
-        </div> 
-      </ParallaxLayer>  
-    </Parallax>
+        </div>
   </div>
   )
 }

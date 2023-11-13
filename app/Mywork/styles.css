@@ -1,6 +1,7 @@
 
   body{
-    background-image: url("../assets/7.jpg");
+    background-image: url("../../public/assets/7.jpg");
+    @apply bg-fixed bg-center bg-no-repeat bg-cover absolute desktop:h-[200vh] laptop:h-[380vh] tablet:h-[150vh] mobile:h-[100vh] w-full;
   }
 
   .videos > .vidCard > .named{

@@ -3,7 +3,7 @@
 
 
   .contactPart{
-    @apply relative flex flex-row justify-evenly mt-[17vw];
+    @apply relative flex flex-row justify-evenly mt-[17vh];
   }
 
   a > p {
@@ -21,5 +21,5 @@
   }
  
   a > p:hover:before{
-    width:55vw;
+    width:52vw;
   }
