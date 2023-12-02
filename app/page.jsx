@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <div>  
-      <Hero/>  
+        <Hero/>  
         <BGimg />  
         <MyWork/>
         <AboutMe/>

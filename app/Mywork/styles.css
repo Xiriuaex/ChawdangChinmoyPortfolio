@@ -1,7 +1,64 @@
 
-  body{
-    background-image: url("../../public/assets/7.jpg");
-    @apply bg-fixed bg-center bg-no-repeat bg-cover absolute desktop:h-[200vh] laptop:h-[380vh] tablet:h-[150vh] mobile:h-[100vh] w-full;
+  html,
+  body {
+    scroll-behavior: smooth;
+  }
+
+  .mainDiv{
+    background-image: url("../../public/assets/bg-lens.jpg");
+    @apply bg-fixed bg-center bg-no-repeat bg-cover absolute mobile:h-[600vh] tablet:h-[380vh] laptop:h-[300vh] w-full;
+  }
+
+  .top {
+    --offset:50px;
+    position: sticky;
+    bottom: 30px;      
+    left: 87vw; 
+    margin-top: calc(120vh + var(--offset)); 
+    /* visual styling */
+    text-decoration: none;
+    padding: 15px; 
+    color: #232323;
+    background: #ffffff;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 15px; 
+    opacity: .6;
+  }
+
+  .top:hover{
+    opacity: 1;
+  }
+
+  .filterSection{
+    @apply text-[#ededed] text-[20px];
+  }
+
+  .filterSection > .btns{
+    @apply px-5 border-b-[2px] border-[#ededed];
+  }
+  .filterSection> .btns:hover{
+    color: #da0037;
+  }
+
+  .filterSection> .btns:focus{
+    color: #da0037de;
+  }
+
+  .heading{
+    @apply relative bottom-8 text-center text-[#e2d7f1] text-6xl;
+  }
+
+  .videos{
+    @apply relative bottom-36 w-full flex flex-row flex-wrap justify-evenly;
+  }
+
+  .vidCard{
+    @apply  h-[43vh] mt-12 mb-12;
+  }
+
+  .videos > .vidCard > img{
+    @apply w-[31vw] h-[43vh];
   }
 
   .videos > .vidCard > .named{
@@ -10,12 +67,13 @@
     position: relative;
     bottom: 100%;
     height: 43vh;
+    max-width: 31vw;
     padding-top: 15px;
     text-align: center;
     background-color: #080808b7;
     color: #ededed; 
     font-size: 4rem;
-   
+    word-wrap: break-word;/* Allow the text to wrap onto the next line if it's too long */
   }
  
   .vidCard{  
@@ -41,7 +99,7 @@
     align-items: center;
     z-index: 1000;
   }
-  
+ 
   .close-button {
     position: absolute;
     top: 10px;
@@ -51,6 +109,68 @@
     padding: 5px 15px; 
     cursor: pointer;
   }
+
   .close-button:hover{
     color: #ededed;
+  }
+
+
+  @media screen and (max-width: 540px) {
+
+    .heading{
+      @apply bottom-24 text-5xl text-[#989898] bg-[#ededed];
+    }
+
+    .videos{
+      @apply bottom-72;
+    }
+
+    .vidCard{
+      @apply  h-[38vh] mt-0;
+    }
+
+    .videos > .vidCard > img{
+      @apply w-full h-[38vh];
+    }  
+    .videos > .vidCard > .named{
+      @apply h-[38vh];
+    }  
+  
+    .video-overlay { 
+      top: 10vh;
+      bottom: 10vh;
+    }
+
+    .close-button { 
+      background-color: #f9f9f962;
+      color: #000;
+    }
+  
+    .close-button:hover { 
+      background-color: #9e919162;
+      color: #ff0000;
+    }
+  
+  }
+ 
+  @media screen and (min-width: 541px) and (max-width:1023px){
+    .heading{
+      @apply bottom-20;
+    }
+
+    .videos{
+      @apply bottom-64;
+    }
+
+    .vidCard{
+      @apply  h-[40vh] mt-0;
+    }
+
+    .videos > .vidCard > img{
+      @apply w-full h-[40vh];
+    }  
+    .videos > .vidCard > .named{
+      @apply h-[40vh];
+    }  
+  
   }

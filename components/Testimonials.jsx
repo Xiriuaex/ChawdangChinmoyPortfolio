@@ -12,7 +12,7 @@ import { Autoplay, Navigation } from 'swiper/modules';
 
 const Testimonials = () => {
   return (
-    <div className='testPart'> 
+    <div data-aos="slide-up" className='testPart'> 
       <div className='testTitle'>
         <p className='text-[#ededed] mobile:text-4xl tablet:text-5xl laptop:text-6xl'>Testimonials</p> 
       </div>

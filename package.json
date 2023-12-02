@@ -9,9 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-spring/parallax": "^9.7.3",
     "aos": "^2.3.4",
     "autoprefixer": "10.4.15",
+    "axios": "^1.6.2",
     "eslint": "8.47.0",
     "eslint-config-next": "13.4.19",
     "file-loader": "^6.2.0",

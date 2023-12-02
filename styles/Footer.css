@@ -52,6 +52,6 @@
 
     @media screen and (min-width: 1023px) {
         .footer{
-            @apply mt-[20rem];
+            @apply mt-[14rem];
         }
     }

@@ -2,17 +2,12 @@
 
 import Nav from '@/components/nav';
 import Footer from '@/components/Footer';
-
-import { Parallax, ParallaxLayer  } from "@react-spring/parallax";
-
+ 
 import "./styles.css";
 
 const page = () => {
 return (
-  <div className='mainDiv'>
-        
-    <Parallax pages={1.34}> 
-      <ParallaxLayer offset={0} speed={2.7}>
+  <div className='mainDiv'> 
         <div className='fixed w-full top-0 z-50'>
           <Nav/> 
         </div>
@@ -25,8 +20,7 @@ return (
         <div className='fixed bottom-0 w-full'>
           <Footer/>
         </div> 
-      </ParallaxLayer>  
-    </Parallax>
+       
   </div>
   )
 }

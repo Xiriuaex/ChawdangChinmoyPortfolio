@@ -3,7 +3,7 @@ import '@/styles/Aboutme.css';
 
 const AboutMe = () => {
   return ( 
-    <div className='aboutsec'>   
+    <div data-aos="slide-up" className='aboutsec'>   
         <div className='aboutMe'>
             <p className='text-[#171717] mobile:text-4xl tablet:text-4xl laptop:text-6xl'>About Me</p>
         </div>
