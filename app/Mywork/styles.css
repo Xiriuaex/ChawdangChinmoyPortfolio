@@ -2,175 +2,107 @@
   html,
   body {
     scroll-behavior: smooth;
+    @apply h-[250vh];
   }
 
-  .mainDiv{
-    background-image: url("../../public/assets/bg-lens.jpg");
-    @apply bg-fixed bg-center bg-no-repeat bg-cover absolute mobile:h-[600vh] tablet:h-[380vh] laptop:h-[300vh] w-full;
+  .heading{
+    @apply relative mt-24 text-center text-6xl text-[#ededed];
+  }
+
+  .filter_section{
+    @apply space-x-5 mt-10 pl-12;
+  }
+
+  .filter_section > .filter_buttons{
+    @apply px-5 border-b-[2px] border-[#ededed] text-[#ededed] text-[20px];
+  }
+
+  .filter_section > .filter_buttons:hover{
+    color: #da0037;
+  } 
+
+  .video_Section{
+    @apply relative mt-14 w-full flex flex-row flex-wrap justify-evenly;
+  }
+
+  .video_Section > .video_Card{
+    @apply h-[43vh] mt-12 mb-12 transition-transform duration-[.4s] ease-in-out;
+  }
+
+  .video_Section > .video_Card > img{
+    @apply w-[31vw] h-[43vh];
+  }
+
+  .video_Section > .video_Card > .video_Title{ 
+    @apply relative bottom-[100%] h-[43vh] max-w-[31vw] pt-[15px] text-center bg-[#080808b7] text-[#ededed] text-[30px] break-all opacity-0 duration-[.6s] ease-in-out;
+  }
+  
+  .video_Section > .video_Card:hover{
+    @apply scale-90; 
+    .video_Title {
+        @apply opacity-100;
+    }
+  }
+
+  .video_Section > .video_Card > .video_Title > .video_Description{
+    @apply text-[20px] mt-5;
+  }
+
+  .video_Overlay {
+    @apply fixed top-[5vh] bottom-[5vh] right-[5vw] left-[5vw] bg-[#000000b3] flex justify-center items-center z-50;
+  }
+ 
+  .close_Button {
+    @apply absolute top-[10px] right-[10px] text-[#ededed62] text-[20px] px-[9px] py-[2px] cursor-pointer;
+  }
+
+  .close_Button:hover{
+    color: #ededed;
   }
 
   .top {
+    @apply sticky bottom-[30px] left-[87vw] p-[15px] text-[#232323] bg-[#ededed] font-semibold text-[1rem] rounded-[15px] opacity-60;
     --offset:50px;
-    position: sticky;
-    bottom: 30px;      
-    left: 87vw; 
     margin-top: calc(120vh + var(--offset)); 
-    /* visual styling */
     text-decoration: none;
-    padding: 15px; 
-    color: #232323;
-    background: #ffffff;
-    font-weight: 600;
-    font-size: 1rem;
-    border-radius: 15px; 
-    opacity: .6;
   }
 
   .top:hover{
     opacity: 1;
   }
 
-  .filterSection{
-    @apply text-[#ededed] text-[20px];
-  }
-
-  .filterSection > .btns{
-    @apply px-5 border-b-[2px] border-[#ededed];
-  }
-  .filterSection> .btns:hover{
-    color: #da0037;
-  }
-
-  .filterSection> .btns:focus{
-    color: #da0037de;
-  }
-
-  .heading{
-    @apply relative bottom-8 text-center text-[#e2d7f1] text-6xl;
-  }
-
-  .videos{
-    @apply relative bottom-36 w-full flex flex-row flex-wrap justify-evenly;
-  }
-
-  .vidCard{
-    @apply  h-[43vh] mt-12 mb-12;
-  }
-
-  .videos > .vidCard > img{
-    @apply w-[31vw] h-[43vh];
-  }
-
-  .videos > .vidCard > .named{
-    transition:.5s ease-in-out;
-    opacity: 0;
-    position: relative;
-    bottom: 100%;
-    height: 43vh;
-    max-width: 31vw;
-    padding-top: 15px;
-    text-align: center;
-    background-color: #080808b7;
-    color: #ededed; 
-    font-size: 4rem;
-    word-wrap: break-word;/* Allow the text to wrap onto the next line if it's too long */
-  }
- 
-  .vidCard{  
-    transition: transform .4s ease-in-out; 
-  }
-
-  .vidCard:hover{
-    transform: scale(.9); 
-    .named {
-        opacity: 1;
-    }
-  }
-
-  .video-overlay {
-    position: fixed; 
-    top: 5vh;
-    bottom: 5vh;
-    right: 5vw;
-    left: 5vw; 
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
- 
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px; 
-    color: #ededed62;
-    font-size: 20px;
-    padding: 5px 15px; 
-    cursor: pointer;
-  }
-
-  .close-button:hover{
-    color: #ededed;
-  }
 
 
-  @media screen and (max-width: 540px) {
-
+  @media screen and (max-width: 720px) {
     .heading{
-      @apply bottom-24 text-5xl text-[#989898] bg-[#ededed];
+      @apply mt-6 text-5xl text-[#4e4d4d] bg-[#ededed];
     }
-
-    .videos{
-      @apply bottom-72;
-    }
-
-    .vidCard{
+ 
+    .video_Section > .video_Card{
       @apply  h-[38vh] mt-0;
     }
 
-    .videos > .vidCard > img{
+    .video_Section > .video_Card > img{
       @apply w-full h-[38vh];
     }  
-    .videos > .vidCard > .named{
-      @apply h-[38vh];
+    .video_Section > .video_Card > .video_Title{
+      @apply max-w-full h-[38vh];
     }  
   
-    .video-overlay { 
-      top: 10vh;
-      bottom: 10vh;
+    .video_Overlay { 
+      top: 15vh;
+      bottom: 15vh;
     }
 
-    .close-button { 
+    .close_Button { 
       background-color: #f9f9f962;
       color: #000;
+
     }
   
-    .close-button:hover { 
+    .close_Button:hover { 
       background-color: #9e919162;
       color: #ff0000;
     }
-  
-  }
- 
-  @media screen and (min-width: 541px) and (max-width:1023px){
-    .heading{
-      @apply bottom-20;
-    }
-
-    .videos{
-      @apply bottom-64;
-    }
-
-    .vidCard{
-      @apply  h-[40vh] mt-0;
-    }
-
-    .videos > .vidCard > img{
-      @apply w-full h-[40vh];
-    }  
-    .videos > .vidCard > .named{
-      @apply h-[40vh];
-    }  
   
   }

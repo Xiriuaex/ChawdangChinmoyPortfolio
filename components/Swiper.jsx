@@ -1,27 +1,32 @@
 
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 
-import ReactPlayer from 'react-player/lazy';
+import ReactPlayer from 'react-player';
  
+//Swiper Js imports:
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow, Mousewheel } from 'swiper/modules';
 
-import '@/styles/MyWork.css';
+//Video Data Context:
+import { DataContext } from '@/Context/dataContext';
 
 export default function App() { 
 
+  const { videoData } = useContext(DataContext);
+
+  //Overlay controll state:
   const [showOverlay, setShowOverlay] = useState(false);
   const [videoID, setVideoID] = useState('');
-
-  const vidArr=['8znAaJYpqPs', 'mob4RkUFIAE', 'KwWUQAG0sKk', 'UYI6yhi4aTc', 'GLy4VKeYxD4' ];
-
+ 
+  //To Open Video Overlay:
   const openVideoOverlay = (videoID) => {
     setVideoID(videoID);
     setShowOverlay(true);
   };
 
+  //To Close Video Overlay:
   const closeVideoOverlay = () => {
     setVideoID('');
     setShowOverlay(false);
@@ -29,6 +34,7 @@ export default function App() {
 
   return (
     <>
+    {/* Swiper Component  with parameters */}
       <Swiper
         effect={'coverflow'} 
         direction='vertical' 
@@ -49,15 +55,17 @@ export default function App() {
         modules={[EffectCoverflow, Mousewheel, Autoplay]} 
         className='swiperBlock'
       > 
-        {vidArr.map((vid)=>{
+      {/* Video array mapping in the swiper */}
+        {videoData.map((vid)=>{
           return(
             <SwiperSlide className='swiperSlide'>
-              <img onClick={() => openVideoOverlay(vid)} src={`http://img.youtube.com/vi/${vid}/0.jpg`} alt="thumbnail-load" />
+              <img onClick={() => openVideoOverlay(vid.embededCode)} src={`http://img.youtube.com/vi/${vid.embededCode}/0.jpg`} alt="thumbnail-load" />
             </SwiperSlide>  
           ) 
         })} 
       </Swiper>
 
+      {/* If ShowOverlay is true then Video Overlay will open */}
       {showOverlay && ( 
         <div data-aos="zoom-in" className="video-overlay">
             <ReactPlayer url={`https://www.youtube.com/embed/${videoID}`} light playing controls width={650} height={450}/>

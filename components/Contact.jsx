@@ -1,11 +1,14 @@
 
+//Contact Css:
 import "@/styles/Contact.css";
 
 const Contact = () => {
   return ( 
-      <div data-aos="slide-right" className='absolute contactPart'>
+      <div data-aos="slide-right" className='contactPart'>
         <a href = "mailto: pragyanchetia22@gmail.com">
-          <p className='text-[#ededed] mobile:text-[3rem] tablet:text-[5rem] laptop:text-[8rem] '>Hire Me ➜</p>
+          <p className="hireMe">
+            Hire Me ➜
+          </p>
         </a>
     </div>
   )

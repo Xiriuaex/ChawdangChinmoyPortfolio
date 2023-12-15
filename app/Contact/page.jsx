@@ -7,20 +7,27 @@ import "./styles.css";
 
 const page = () => {
 return (
-  <div className='mainDiv'> 
-        <div className='fixed w-full top-0 z-50'>
-          <Nav/> 
-        </div>
-        <div className='relative mt-40'>
-            <div className='heading text-center text-[#e2d7f1] mobile:text-3xl tablet:text-4xl laptop:text-6xl'>CONTACT DETAILS</div>
-            <div className="videos w-full flex flex-row flex-wrap justify-evenly">
-               
+  <div className='contactDiv'> 
+            <div className='fixed w-full z-50'>
+              <Nav/> 
             </div>
-        </div>  
-        <div className='fixed bottom-0 w-full'>
-          <Footer/>
-        </div> 
-       
+            <div className='relative top-[7.5rem] ml-16 text-[#e2d7f1] mobile:text-3xl tablet:text-4xl laptop:text-5xl'>CONTACT ME</div>
+            <div className="relative flex flex-row w-full h-[30vh] justify-evenly top-[11rem] text-[#e2d7f1]">
+               <div className="address text-center mt-[10vh]"> 
+                  <p>Visit at</p>
+                  <p>Opp Chest Hosp, S R Nagar</p>
+                  <p>7107, Hyderabad, India</p>
+               </div>
+               <div className="connect text-center mt-[10vh]">
+                  <p>Contact at</p>
+                  <p> +91  04023815151</p>
+                  <p>something@gmail.com</p>
+               </div> 
+            </div>
+            <div className='relative top-16'>
+              <Footer/>
+            </div>
+
   </div>
   )
 }

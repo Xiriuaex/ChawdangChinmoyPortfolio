@@ -17,7 +17,7 @@ module.exports = {
       'laptop': '1024px',
       //(min-width: 1024px)
 
-      'desktop': '1025px',
+      'desktop': '1280px',
       //(min-width: 1280px)
     },
     fontFamily: {

@@ -1,42 +1,34 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
-
-
-  .aboutsec{
-    @apply relative h-[55vh] w-[80vw] m-auto mt-[30vh] flex flex-row justify-between items-center bg-gradient-to-tr from-[#EDEDED] via-[#7b7979] to-[#444444];
+  .aboutSection{
+    @apply relative h-[55vh] w-[80vw] m-auto mt-[30vh] flex flex-row justify-between items-center bg-[#ededed] text-[#171717] ;
   }
 
   .details{ 
-    @apply m-auto w-[40vw];
+    @apply m-auto w-[40vw] tablet:text-xl laptop:text-2xl;
   }
 
-  .aboutMe{ 
-    margin: auto;
-    font-family: 'Lato';   
+  .aboutMe{
+    @apply m-auto font-sans italic font-normal mobile:text-4xl tablet:text-4xl laptop:text-6xl;
   }    
   
   @media screen and (max-width: 540px) {
-    .aboutsec{
+    .aboutSection{
       @apply w-full left-0 h-[50vh] flex-col;
     } 
 
     .aboutMe{
-      margin-top: 25px; 
+      @apply mt-[25px]; 
     }
 
     .details{
-      width: 90vw;
-      margin-bottom: 55px;
+      @apply w-[90vw] mb-[55px]; 
     }
   }
 
   @media screen and (min-width:768px) and (max-width: 1023px) {
-    .aboutsec{
-      width: 78vw;
-      height: 55vh;  
+    .aboutSection{
+      @apply w-[78vw] h-[55vh];
     }
     .details{ 
-      margin-right: 15px;
-      width: 50vw;
-    }
+      @apply mr-[15px] w-[50vw];}
   }

@@ -1,39 +1,36 @@
 'use client'
 
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import ReactPlayer from 'react-player';
 
 import Nav from '@/components/nav';
 import Footer from '@/components/Footer';
-import Loader from '@/components/loader';
 
+//Context data:
+import { DataContext } from '@/Context/dataContext';
+
+//Stylesheet:
 import "./styles.css";  
 
+const page = () => { 
 
-const page = () =>  {
-  const vidArr=[{id:'8znAaJYpqPs', cat:"trailer"},
-  {id:'mob4RkUFIAE', cat:"trailer"},
-  {id:'KwWUQAG0sKk', cat:"film"},
-  {id:'UYI6yhi4aTc', cat:"shorts"},
-  {id:'8znAaJYpqPs', cat:"film"},
-  {id:'mob4RkUFIAE', cat:"film"},
-  {id:'KwWUQAG0sKk', cat:"shorts"},
-  {id:'mob4RkUFIAE', cat:"trailer"}]
-    
-  const [showOverlay, setShowOverlay] = useState(false);
-  const [videoID, setVideoID] = useState('');  
+  const { videoData } = useContext(DataContext);
+  const [videos, setvideos] = useState(videoData);
   
-  const filterBtns= [...new Set(vidArr.map((vid)=> vid.cat))];
+  //Overlay States:
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [videoID, setVideoID] = useState('');
 
-  const [videos, setvideos]= useState(vidArr);
+  //Filter buttons Array: copying all the category from the videoData array:
+  const filterBtns= [...new Set(videoData.map((vid)=> vid.category))];
 
+  //Filter value change function:
   const onFilterValueChanged=(currCat)=>{
-    const videoByCat = vidArr.filter((newVal) => {
-      return newVal.cat === currCat;
+    const videoByCategory = videoData.filter((newVal) => {
+      return newVal.category === currCat;
     });
-    setvideos(videoByCat);
-  } 
-
+    setvideos(videoByCategory);
+  }
 
   //Overlay functions:
   const openVideoOverlay = (videoID) => {
@@ -47,44 +44,54 @@ const page = () =>  {
   };
 
 return (
-  <div className='mainDiv'>
-    <Nav/>
+  <div className='main_div'>
+    <Nav />
+
+    {/* Header: */}
     <div className="heading">MY WORK</div>
-    <div className='filterSection absolute space-x-5 top-[48vh] ml-7'>
+
+    {/* Filter button div: */}
+    <div className='filter_section'>
           {
             filterBtns.map((vidCat, id)=>(
-                <button className="btns" key={id} onClick={()=>onFilterValueChanged(vidCat)}>
+                <button className="filter_buttons" key={id} onClick={()=>onFilterValueChanged(vidCat)}>
                     {vidCat}
                 </button> 
             ))
           }
           
-          <button className="btns" onClick={()=>setvideos(vidArr)}>
+          <button className="filter_buttons" onClick={()=>setvideos(videoData)}>
             All
           </button>
     </div>
-    <div className="videos">
-      {videos.map((vid, id)=>{
+
+    {/* Video Section: */}
+    <div className="video_Section">
+      {videos.map((video, id)=>{
         return( 
-          <div onClick={()=>openVideoOverlay(vid.id)}  className="vidCard" key={id}> 
-            <img key={id} src={`http://img.youtube.com/vi/${vid.id}/0.jpg`}  alt="thumbnail-load"/>
-            <div key={id} className="named">
-              <div className="text-[30px]">this</div>
+          <div onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card" key={id}> 
+            <img key={id} src={`http://img.youtube.com/vi/${video.embededCode}/0.jpg`}  alt="thumbnail_load"/>
+            <div key={id} className="video_Title">
+              <div>{video.title}</div>
+              <div className='video_Description'>{video.description}</div>
             </div>
           </div> 
         )
       })}
     </div>
-    {showOverlay && ( 
-      <div data-aos="zoom-in" className="video-overlay">
-          <ReactPlayer onProgress={ <Loader/>} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
-          <button className="close-button" onClick={closeVideoOverlay}>x</button>
-      </div>
-    )} 
 
-      <a href="#" className="top">Back to Top</a> 
-      <Footer/>
-  </div> 
+    {/* Overlay playe: */}
+    {showOverlay && ( 
+      <div data-aos="zoom-in" className="video_Overlay">
+          <ReactPlayer url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
+          <button className="close_Button" onClick={closeVideoOverlay}>x</button>
+      </div>
+    )}
+
+    <a href="#" className="top">Back to Top</a>  
+    
+    <Footer/> 
+  </div>
 )}
 
 export default page

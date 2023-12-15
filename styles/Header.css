@@ -1,58 +1,8 @@
- 
-  .hoverLink {
-    background-image: linear-gradient(
-      to right,
-      #DA0037,
-      #DA0037 50%,
-      #ededed 50%
-    );
-    background-size: 200% 100%;
-    background-position: -100%;
-    display: inline-block;
-    position: relative;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    transition: all 0.3s ease-in-out;
-  }
-  
-   .hoverLink::before{
-    content: '';
-    background: #DA0037;
-    display: block;
-    position: absolute;
-    bottom: -3px;
-    left: 0;
-    width: 0;
-    height: 3px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .hoverLink:hover {
-   background-position: 0;
-  }
-  
-  .hoverLink:hover::before{
-    width: 100%;
-  } 
-  
+
   h1 {
     @apply text-center text-[#ededed] font-black;
   } 
 
-  .navbar{
-    @apply absolute top-0 bg-neutral-900 opacity-90 flex flex-row justify-evenly w-full;
-  }
-
   .heading{
-    @apply absolute w-full my-[14rem] space-y-7;
-  }
-
-  .main_title{
-    @apply my-auto text-4xl;
-  }
-  
-  @media screen and (max-width: 540px) {
-    .main_title{
-      @apply my-4 text-3xl text-center;
-    }
+    @apply absolute top-[45vh] w-full z-50;
   }

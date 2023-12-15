@@ -1,14 +1,18 @@
 
-import Header from "@/components/Header.jsx"; 
-import BGvids from "@/components/BGvids.jsx";
-import Nav from "@/components/nav.jsx";
+//herosection video:
+import vidSrc from "@/public/assets/videos/This.mp4";
+
+//Header styles css:
+import "@/styles/Header.css"; 
 
 const Hero = () => {
   return (
     <div>
-      <Nav />
-      <Header /> 
-      <BGvids />
+      <video className="relative right-0 -top-20 object-fill w-full h-[100vh]" src={vidSrc} playsInline autoPlay muted loop type="video/mp4" />
+      <div className='heading'>
+        <h1 className='mobile:text-4xl tablet:text-5xl laptop:text-6xl'>CHAWDANG CHINMOY</h1>
+        <h1 className='mobile:text-xl tablet:text-3xl'>Who, Am, I?</h1>
+      </div>
     </div>
   )
 }

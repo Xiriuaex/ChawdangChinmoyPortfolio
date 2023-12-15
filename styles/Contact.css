@@ -1,17 +1,13 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
-
-
   .contactPart{
-    @apply relative flex flex-row justify-evenly mt-[17vh];
+    @apply relative text-center mt-[17vh];
   }
 
-  a > p {
-      font-weight: 700;  
-      text-transform: uppercase;
-      margin: auto;
-  }   
-  a > p::before{ 
+  a > .hireMe {
+    @apply font-semibold uppercase text-[#ededed] mobile:text-[3rem] tablet:text-[5rem] laptop:text-[8rem];
+  }
+
+  a > .hireMe::before{ 
     content: 'HIRE\00a0ME\00a0➜';
     position:absolute;
     background-color: #DA0037;  
@@ -19,7 +15,7 @@
     overflow:hidden;
     transition:all 0.5s;
   }
- 
-  a > p:hover:before{
-    width:52vw;
+
+  a > .hireMe:hover:before{
+    width:54vw;
   }

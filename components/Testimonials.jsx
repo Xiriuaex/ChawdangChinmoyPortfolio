@@ -1,13 +1,11 @@
 
+//Testimonial CSS:
 import "@/styles/Test.css";
  
+//Swiper Js imports:
 import { Swiper, SwiperSlide } from 'swiper/react';
-
-// Import Swiper styles
 import 'swiper/css';
-import 'swiper/css/navigation'; 
-
-// import required modules
+import 'swiper/css/navigation';
 import { Autoplay, Navigation } from 'swiper/modules';
 
 const Testimonials = () => {

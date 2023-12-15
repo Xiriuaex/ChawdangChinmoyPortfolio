@@ -2,13 +2,24 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Font imports */
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@1,300;1,400&family=Open+Sans:ital,wght@1,300;1,400&display=swap');
+
+
+/* background image fixed: */
+body{
+    @apply bg-fixed bg-center bg-no-repeat bg-cover bg-[url('../public/assets/7.jpg')] absolute -z-50 w-full desktop:h-[370vh] laptop:h-[400vh] tablet:h-[340vh] mobile:h-[350vh];
+}
 
 /* scrollbar css */
 ::-webkit-scrollbar {
+    background-color: transparent;
     width: 10px;
 } 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background-color: transparent;
+    
+  background-clip: content-box;
 }
 ::-webkit-scrollbar-thumb {
     background: #da0037;

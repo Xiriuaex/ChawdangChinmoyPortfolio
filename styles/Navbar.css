@@ -1,0 +1,78 @@
+    
+    .navbar{
+        @apply sticky w-full z-50 top-0 h-20 bg-neutral-900 opacity-90 flex flex-row justify-between;
+    }
+      
+    .hoverLink {
+        background-image: linear-gradient(
+        to right,
+        #DA0037,
+        #DA0037 50%,
+        #ededed 50%
+        );
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+    }
+ 
+    .hoverLink::before{
+        content: '';
+        background: #DA0037;
+        display: block;
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 3px;
+        transition: all 0.3s ease-in-out;
+    }
+  
+    .hoverLink:hover {
+        background-position: 0;
+    }
+  
+    .hoverLink:hover::before{
+        width: 100%;
+    } 
+
+   /* dropdown for mobile */ 
+    .dropdown_body {
+        @apply absolute hidden w-[40vh] right-0 top-[4.4rem] bg-[#393939] rounded-lg; 
+    }
+
+    .dropdown_body.open {
+        display: block;
+    }
+
+    .icon_hover{
+        color: #ededed;
+    }
+
+    .icon_hover:hover {
+        color: #DA0037;
+    } 
+
+    .dropdown_items{ 
+        background-image: linear-gradient(
+        to right,
+        #DA0037,
+        #DA0037 50%,
+        #ededed 50%
+        );
+        background-size: 200% 100%;
+        background-position: -100%;
+        display: inline-block;
+        position: relative;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .dropdown_items:hover {
+        background-position: 0; 
+    } 
+    

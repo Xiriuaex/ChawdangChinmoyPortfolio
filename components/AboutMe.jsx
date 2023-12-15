@@ -1,16 +1,16 @@
 
+//About Section CSS:
 import '@/styles/Aboutme.css'; 
 
 const AboutMe = () => {
   return ( 
-    <div data-aos="slide-up" className='aboutsec'>   
+    <div data-aos="slide-up" className='aboutSection'>   
         <div className='aboutMe'>
-            <p className='text-[#171717] mobile:text-4xl tablet:text-4xl laptop:text-6xl'>About Me</p>
+            <p>ABOUT ME</p>
         </div>
         <div className="details">
-          <p className='text-[#171717] text-center tablet:text-xl laptop:text-2xl'>cupiditate laudantium adipisci laudantium adipisci laudantium adipisci delectus. Quis delectus dolorum quasi quibusdam sequi?</p>
+          <p className='text-justify'>I am a passionate Cinematographer Open to Create and collaborate. I have experience in trailers, short stories, music videos, aftermovies and many more. Contact me for more details.</p>
         </div>
-          
     </div> 
     
   )

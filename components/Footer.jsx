@@ -5,7 +5,7 @@ import { BiLogoFacebookSquare, BiLogoInstagramAlt, BiLogoLinkedinSquare } from "
 
 const Footer = () => {
   return (
-    <div className='footer bottom-0'> 
+    <div className='footer'> 
         <div className='mb-6 mt-10'>
             <p className='f_name'>ChawdangChinmoy</p>
             <p className='f_details'>Lorem ipsum dolor sit, amet c lit.</p>

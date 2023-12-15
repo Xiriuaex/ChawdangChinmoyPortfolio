@@ -1,11 +1,18 @@
 
-import '@/styles/MyWork.css';   
-import Swiper from './Swiper.jsx'; 
+import Link from 'next/link';
+
+//import Swiper Component:
+import Swiper from './Swiper.jsx';
+
+//My Work CSS:
+import '@/styles/MyWork.css';
+
 const MyWork = () => {
   return (
       <div data-aos="slide-up" className='workSection'>
-        <div className='title mx-auto text-[#171717] mobile:text-3xl tablet:text-4xl laptop:text-6xl'>
-          MY WORK
+        <div className='title flex flex-col'>
+          MY WORK 
+          <Link className='hover:text-[#DA0037] text-[1rem] ml-[2.3px] mt-[4px]' href={"/Mywork"}>See All</Link> 
         </div>
         <div>
           <Swiper/>
