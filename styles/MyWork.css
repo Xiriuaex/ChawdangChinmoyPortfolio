@@ -1,11 +1,11 @@
 
 
-  .workSection{
+  .work_Section{
     @apply relative h-[55vh] mx-auto w-[80vw] mt-32 flex flex-row justify-between items-center bg-[#ededed];
   }
 
-  .title {
-    @apply font-sans italic font-normal mx-auto text-[#171717] mobile:text-3xl tablet:text-4xl laptop:text-6xl
+  .work_Section > .title {
+    @apply flex flex-col font-sans italic font-normal ml-[4%] text-[#171717] mobile:text-4xl laptop:text-6xl;
   }
  
  
@@ -13,41 +13,48 @@
     @apply w-[37vw] h-[40vh];
   }
     
-  .swiperBlock{
+  .swiper_Block{
     @apply !w-[50vw] !h-[55vh];
   }
 
-  .swiperSlide{
+  .swiper_Slide{
     @apply !w-[37vw] !h-[40vh] m-auto;
   }
 
-  .video-overlay {
-    @apply absolute top-[1vh] bottom-[1vh] right-[1vh] left-[1vh] h-[90vh] flex justify-center items-center z-50;
-    background: rgba(0, 0, 0, 0.7);
+  .video_Overlay {
+    @apply fixed -top-24 left-0 w-full h-[90vh]  flex pl-28 justify-evenly items-center bg-[#000000b3] z-50;
   }
 
-  .close-button {
+  .video_Overlay > .video_Details {
+    @apply text-3xl text-[#ededed] absolute top-14 left-4;
+  }
+
+  .close_Button {
     @apply absolute top-[10px] right-[10px] text-[#ededed62] text-[20px] py-[5px] px-[15px] cursor-pointer;
   }
 
-  .close-button:hover{
+  .close_Button:hover{
     @apply  text-[#ededed];
   }
 
   @media screen and (max-width: 540px) {
-    .workSection{   
-      @apply mt-[25vh] overflow-hidden w-full flex-col;
+    .work_Section{   
+      @apply h-[65vh] mt-[20vh] overflow-hidden w-full flex-col;
     } 
+
+    .work_Section > .title {
+      @apply mt-[16px];
+    }
 
     img{
       @apply w-[80vw] h-[40vh];
     }
       
-    .swiperBlock{
+    .swiper_Block{
       @apply !w-[80vw] !h-[40vh] mb-[15px];
     }
   
-    .swiperSlide{
+    .swiper_Slide{
       @apply !w-[80vw] !h-[40vh] m-auto;
     }  
   }

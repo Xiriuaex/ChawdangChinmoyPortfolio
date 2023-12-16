@@ -3,7 +3,7 @@
 import vidSrc from "@/public/assets/videos/This.mp4";
 
 //Header styles css:
-import "@/styles/Header.css"; 
+import "@/styles/Hero.css"; 
 
 const Hero = () => {
   return (

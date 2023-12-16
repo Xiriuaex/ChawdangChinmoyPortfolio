@@ -3,13 +3,13 @@
 import { useEffect } from "react";
 
 //importing all the components that constructs the home page:
-import Nav from "@/components/nav.jsx";
-import Hero from "@/components/Hero.jsx";
-import MyWork from "@/components/MyWork.jsx";
-import AboutMe from "@/components/AboutMe.jsx";
-import Testimonials from "@/components/Testimonials.jsx";
-import Contact from "@/components/Contact.jsx";
-import Footer from "@/components/Footer.jsx";
+import Nav from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import MyWork from "@/components/MyWork";
+import AboutMe from "@/components/AboutMe";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 
 //importing aos library to imply animations on scroll:
@@ -29,7 +29,7 @@ const Home = () => {
       <div>  
           <Nav />
           <Hero/>
-          <MyWork/>
+          <MyWork/> 
           <AboutMe/>
           <Testimonials/>
           <Contact/>

@@ -4,9 +4,9 @@ import "@/styles/Contact.css";
 
 const Contact = () => {
   return ( 
-      <div data-aos="slide-right" className='contactPart'>
+      <div data-aos="slide-right" className='contact_Part'>
         <a href = "mailto: pragyanchetia22@gmail.com">
-          <p className="hireMe">
+          <p className="hire_Me">
             Hire Me ➜
           </p>
         </a>

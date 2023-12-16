@@ -3,7 +3,7 @@
 import { useContext, useState } from 'react'
 import ReactPlayer from 'react-player';
 
-import Nav from '@/components/nav';
+import Nav from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 //Context data:

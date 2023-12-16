@@ -3,7 +3,7 @@
         @apply sticky w-full z-50 top-0 h-20 bg-neutral-900 opacity-90 flex flex-row justify-between;
     }
       
-    .hoverLink {
+    .hover_Link {
         background-image: linear-gradient(
         to right,
         #DA0037,
@@ -19,7 +19,7 @@
         transition: all 0.3s ease-in-out;
     }
  
-    .hoverLink::before{
+    .hover_Link::before{
         content: '';
         background: #DA0037;
         display: block;
@@ -31,11 +31,11 @@
         transition: all 0.3s ease-in-out;
     }
   
-    .hoverLink:hover {
+    .hover_Link:hover {
         background-position: 0;
     }
   
-    .hoverLink:hover::before{
+    .hover_Link:hover::before{
         width: 100%;
     } 
 

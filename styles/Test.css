@@ -1,9 +1,9 @@
 
-  .testPart{
+  .test_Part{
     @apply  relative w-full mt-28 flex flex-col justify-between items-center;
   }
 
-  .testTitle > p {
+  .test_Title > p {
     @apply font-bold uppercase;
   }
 

@@ -1,8 +1,8 @@
 
   html,
   body {
-    scroll-behavior: smooth;
-    @apply h-[250vh];
+    scroll-behavior: smooth; 
+    @apply h-[100%];
   }
 
   .heading{

@@ -1,6 +1,6 @@
 'use client'
 
-import Nav from '@/components/nav';
+import Nav from '@/components/Navbar';
 import Footer from '@/components/Footer';
  
 import "./styles.css";

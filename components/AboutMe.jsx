@@ -4,8 +4,8 @@ import '@/styles/Aboutme.css';
 
 const AboutMe = () => {
   return ( 
-    <div data-aos="slide-up" className='aboutSection'>   
-        <div className='aboutMe'>
+    <div data-aos="slide-up" className='about_Section'>   
+        <div className='about_Me'>
             <p>ABOUT ME</p>
         </div>
         <div className="details">

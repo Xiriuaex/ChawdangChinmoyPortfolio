@@ -1,13 +1,13 @@
 
-  .contactPart{
+  .contact_Part{
     @apply relative text-center mt-[17vh];
   }
 
-  a > .hireMe {
+  a > .hire_Me {
     @apply font-semibold uppercase text-[#ededed] mobile:text-[3rem] tablet:text-[5rem] laptop:text-[8rem];
   }
 
-  a > .hireMe::before{ 
+  a > .hire_Me::before{ 
     content: 'HIRE\00a0ME\00a0➜';
     position:absolute;
     background-color: #DA0037;  
@@ -16,6 +16,6 @@
     transition:all 0.5s;
   }
 
-  a > .hireMe:hover:before{
+  a > .hire_Me:hover:before{
     width:54vw;
   }

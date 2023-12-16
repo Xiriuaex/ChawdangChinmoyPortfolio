@@ -40,15 +40,15 @@ const Nav = () => {
   return (
       <nav className={`navbar ${ scrollDirection === "down" ? "-top-24" : "top-0"} transition-all duration-500`}>
           <div className='ml-[8vw] mt-[3.5vh]'>
-            <span className='text-4xl'><Link href={"/"} className='hoverLink'>CHINMOY</Link></span>
+            <span className='text-4xl'><Link href={"/"} className='hover_Link'>CHINMOY</Link></span>
           </div>
 
           {/* Desktop/tablet Navbar */}
           <div className='mobile:hidden tablet:inline mr-[8vw] mt-[5vh]'>
             <ul className='flex flex-row space-x-8'>
-                <li><Link className='hoverLink' href={"/"}>Home</Link></li>
-                <li><Link className='hoverLink' href={"/Mywork"}>My Work</Link></li>
-                <li><Link className='hoverLink' href={"/Contact"}>Contact Me</Link></li>
+                <li><Link className='hover_Link' href={"/"}>Home</Link></li>
+                <li><Link className='hover_Link' href={"/Mywork"}>My Work</Link></li>
+                <li><Link className='hover_Link' href={"/Contact"}>Contact Me</Link></li>
             </ul>
           </div> 
 

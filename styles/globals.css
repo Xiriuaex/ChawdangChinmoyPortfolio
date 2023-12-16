@@ -8,7 +8,7 @@
 
 /* background image fixed: */
 body{
-    @apply bg-fixed bg-center bg-no-repeat bg-cover bg-[url('../public/assets/7.jpg')] absolute -z-50 w-full desktop:h-[370vh] laptop:h-[400vh] tablet:h-[340vh] mobile:h-[350vh];
+    @apply bg-fixed bg-center bg-no-repeat bg-cover bg-[url('../public/assets/7.jpg')] absolute -z-50 w-full h-[100%];
 }
 
 /* scrollbar css */
