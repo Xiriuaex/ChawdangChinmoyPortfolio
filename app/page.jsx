@@ -28,8 +28,8 @@ const Home = () => {
   return (
       <div>  
           <Nav />
-          <Hero/>
-          <MyWork/> 
+          <Hero/> 
+          <MyWork/>
           <AboutMe/>
           <Testimonials/>
           <Contact/>

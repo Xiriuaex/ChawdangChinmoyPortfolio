@@ -10,35 +10,38 @@ import { FaBars } from "react-icons/fa6";
 import '@/styles/Navbar.css'
 
 const Nav = () => {
-    const [scrollDirection, setScrollDirection] = useState(0);
-  
-    useEffect(() => {
-      let lastScrollY = window.pageYOffset;
-  
-      const updateScrollDirection = () => {
-        const scrollY = window.pageYOffset;
-        const direction = scrollY > lastScrollY ? "down" : "up";
-        if (direction !== scrollDirection && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) {
-          setScrollDirection(direction);
-        }
-        lastScrollY = scrollY > 0 ? scrollY : 0;
-      };
-      window.addEventListener("scroll", updateScrollDirection); // add event listener
-      return () => {
-        window.removeEventListener("scroll", updateScrollDirection); // clean up
-      }
-    }, [scrollDirection]);
+  const [show, setShow] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+    
+  const controlNavbar = () => {
+    if (window.scrollY > lastScrollY && (scrollY - lastScrollY > 10 || scrollY - lastScrollY < -10)) { // if scroll down hide the navbar
+      setShow(false); 
+    } else if(window.scrollY < lastScrollY) { // if scroll up show the navbar
+      setShow(true);  
+    }
+    // remember current page location to use in the next move
+    setLastScrollY(window.scrollY); 
+  }; 
 
-    //state of the dropdown:
-    const [isOpen, setOpen] = useState(false);
+  useEffect(() => {
+    window.addEventListener('scroll', controlNavbar);
+    
+    return () => {
+       window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
 
-    //to toggle the dropdown state:
-    const toggleDropdown = () =>{
-      setOpen(!isOpen); 
-    } 
+  
+  //state of the dropdown:
+  const [isOpen, setOpen] = useState(false);
+
+  //to toggle the dropdown state:
+  const toggleDropdown = () =>{
+    setOpen(!isOpen);  
+  } 
 
   return (
-      <nav className={`navbar ${ scrollDirection === "down" ? "-top-24" : "top-0"} transition-all duration-500`}>
+      <nav className={`navbar ${ show ? "show" : "hidden"} transition-all duration-500`}>
           <div className='ml-[8vw] mt-[3.5vh]'>
             <span className='text-4xl'><Link href={"/"} className='hover_Link'>CHINMOY</Link></span>
           </div>
@@ -55,7 +58,7 @@ const Nav = () => {
           {/* Mobile Navbar */}
           <div className='relative right-8 mobile:flex tablet:hidden'>
             <FaBars className='text-[#ededed] w-10 h-8 mt-[4.5vh] icon_hover' onClick={toggleDropdown} />
-            <div className={`dropdown_body ${isOpen && 'open'}`}>
+            <div className={`dropdown_body ${!isOpen && "hidden"}`}>
               <ul className='flex flex-col my-5 space-y-5 ml-7'>
                 <li><Link className='dropdown_items' href={"/"}>Home</Link></li>
                 <li><Link className='dropdown_items' href={"/Mywork"}>My Work</Link></li>

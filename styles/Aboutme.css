@@ -8,7 +8,7 @@
   }    
   
   .about_Section > .details{ 
-    @apply m-auto w-[40vw] tablet:text-xl laptop:text-2xl;
+    @apply m-auto w-[40vw] text-2xl;
   }
 
   @media screen and (max-width: 540px) {
@@ -21,7 +21,7 @@
     }
 
     .about_Section > .details{
-      @apply w-[90vw] mb-[55px]; 
+      @apply w-[90vw] mb-[55px] text-xl; 
     }
   }
 
@@ -30,5 +30,6 @@
       @apply w-[78vw] h-[55vh];
     }
     .about_Section > .details{ 
-      @apply mr-[15px] w-[50vw];}
+      @apply mr-[15px] w-[50vw];
+    }
   }

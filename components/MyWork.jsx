@@ -81,7 +81,7 @@ const MyWork = () => {
       {showOverlay && 
           <div data-aos="zoom-in" className="video_Overlay">
             <div className='video_Details'>{videoTitle}</div>
-            <ReactPlayer url={`https://www.youtube.com/embed/${videoID}`} light playing controls width={650} height={450}/>
+            <ReactPlayer style={{marginRight:'3.5rem'}} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
             <button className="close_Button" onClick={closeVideoOverlay}>x</button>
           </div>
         }

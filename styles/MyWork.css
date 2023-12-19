@@ -22,11 +22,11 @@
   }
 
   .video_Overlay {
-    @apply fixed -top-24 left-0 w-full h-[90vh]  flex pl-28 justify-evenly items-center bg-[#000000b3] z-50;
+    @apply fixed -top-24 left-0 w-full h-[90vh] flex pl-28 justify-center items-center bg-[#000000b3] z-50;
   }
 
   .video_Overlay > .video_Details {
-    @apply text-3xl text-[#ededed] absolute top-14 left-4;
+    @apply text-3xl text-[#ededed] top-16 mr-10 ml-14 flex-wrap;
   }
 
   .close_Button {
@@ -37,6 +37,15 @@
     @apply  text-[#ededed];
   }
 
+
+  @media screen and (max-width: 750px){
+    
+    .video_Overlay {
+      @apply w-full flex-col;
+    }
+
+
+  }
   @media screen and (max-width: 540px) {
     .work_Section{   
       @apply h-[65vh] mt-[20vh] overflow-hidden w-full flex-col;

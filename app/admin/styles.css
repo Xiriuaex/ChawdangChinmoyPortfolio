@@ -1,9 +1,0 @@
-
-body{
-    background-image: url("../../public/assets/bg-lens.jpg");
-    @apply bg-fixed bg-center bg-no-repeat bg-cover absolute mobile:h-[600vh] tablet:h-[380vh] laptop:h-[120vh] w-full;
-  }
-
-  .new_section{
-    @apply relative top-40 left-36 text-[#ededed];
-  }

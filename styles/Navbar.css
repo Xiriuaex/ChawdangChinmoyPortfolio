@@ -41,7 +41,7 @@
 
    /* dropdown for mobile */ 
     .dropdown_body {
-        @apply absolute hidden w-[40vh] right-0 top-[4.4rem] bg-[#393939] rounded-lg; 
+        @apply absolute  w-[40vh] right-0 top-[4.4rem] bg-[#393939] rounded-lg; 
     }
 
     .dropdown_body.open {
@@ -76,3 +76,14 @@
         background-position: 0; 
     } 
     
+    /* Navbar visibility classes: */
+    .show {
+        visibility: visible;
+        transition: all 0.3s;
+      }
+    
+    .hidden {
+        visibility: hidden;
+        transition: all 0.3s;
+        transform: translateY(-100%);
+      }
