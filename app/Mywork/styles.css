@@ -46,7 +46,7 @@
   }
 
   .video_Overlay {
-    @apply fixed top-[5vh] bottom-[5vh] right-[5vw] left-[5vw] bg-[#000000b3] flex justify-center items-center z-50;
+    @apply fixed top-[5vh] bottom-[5vh] right-[5vw] left-[5vw] bg-[#000000d5] flex justify-center items-center z-50;
   }
  
   .close_Button {
