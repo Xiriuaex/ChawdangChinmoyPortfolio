@@ -40,7 +40,7 @@ const Nav = () => {
   } 
 
   return (
-      <nav className={`navbar ${ show ? "show" : "hidden"} transition-all duration-500`}>
+      <nav className={`navbar ${ show ? "show" : "hidden"} transition-all duration-500 z-50`}>
           <div className='ml-[8vw] mt-[3.5vh]'>
             <span className='text-4xl'><Link href={"/"} className='hover_Link'>CHINMOY</Link></span>
           </div>
