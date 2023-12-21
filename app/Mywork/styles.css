@@ -108,7 +108,7 @@
 
   @media screen and (max-width: 540px){ 
       .video_Overlay {
-        @apply fixed top-0 right-0 justify-center h-full px-20 py-20 bg-[#000000d5] flex z-50;
+        @apply fixed top-0 right-0 pl-12 h-full;
       }
        
   }
