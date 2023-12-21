@@ -46,8 +46,7 @@ return (
   <div className='main_div'>
     <Nav />
  
-    <div className="heading relative mt-24 text-center text-6xl text-[#ededed]">MY WORK</div>
- 
+
     <div className='filter_section'>
           {
             filterBtns.map((vidCat, id)=>(
