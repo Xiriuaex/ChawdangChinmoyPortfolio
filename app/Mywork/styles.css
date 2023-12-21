@@ -46,7 +46,7 @@
   }
 
   .video_Overlay {
-    @apply fixed top-0 right-0 px-20 py-20 bg-[#000000d5] flex z-50;
+    @apply fixed w-full h-full top-0 right-0 px-20 py-20 bg-[#000000d5] flex z-50;
   }
   
   .close_Button {
@@ -108,7 +108,7 @@
 
   @media screen and (max-width: 540px){ 
       .video_Overlay {
-        @apply fixed top-0 right-0 pl-12 h-full;
+        @apply fixed w-full h-full top-0 right-0 pl-16;
       }
        
   }
