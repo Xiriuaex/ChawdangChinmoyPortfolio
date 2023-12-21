@@ -8,8 +8,11 @@
   }
 
   @media screen and (max-width: 600px) {
+    .heading{
+      @apply absolute top-[30vh] w-full z-50;
+    }
     .hero{
-      @apply h-[70vh];
+      @apply h-[80vh];
     }
     
   }
