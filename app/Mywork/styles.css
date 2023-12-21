@@ -3,11 +3,7 @@
   body {
     scroll-behavior: smooth; 
     @apply h-[100%];
-  }
-
-  .heading{
-    @apply relative mt-24 text-center text-6xl text-[#ededed];
-  }
+  } 
 
   .filter_section{
     @apply space-x-5 mt-10 pl-12;

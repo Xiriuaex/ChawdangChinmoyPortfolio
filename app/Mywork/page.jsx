@@ -45,11 +45,9 @@ const Page = () => {
 return (
   <div className='main_div'>
     <Nav />
-
-    {/* Header: */}
-    <div className="heading">MY WORK</div>
-
-    {/* Filter button div: */}
+ 
+    <div className="heading relative mt-24 text-center text-6xl text-[#ededed]">MY WORK</div>
+ 
     <div className='filter_section'>
           {
             filterBtns.map((vidCat, id)=>(
