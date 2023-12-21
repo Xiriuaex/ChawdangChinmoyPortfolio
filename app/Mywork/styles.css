@@ -46,7 +46,7 @@
   }
 
   .video_Overlay {
-    @apply fixed w-full h-full top-0 right-0 px-20 py-20 bg-[#000000d5] flex z-50;
+    @apply fixed w-full h-full top-0 right-0 items-center bg-[#000000d5] flex z-50;
   }
   
   .close_Button {
