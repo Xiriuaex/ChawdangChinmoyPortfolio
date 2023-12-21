@@ -21,15 +21,15 @@
     @apply !w-[37vw] !h-[40vh] m-auto;
   }
 
-  .video_Overlay {
+  .Overlay {
     @apply fixed w-full h-full flex justify-center items-center pr-[3rem] bg-[#F3EFE0] z-50;
   }
 
-  .video_Overlay > .video_Details {
+  .Overlay > .video_Details {
     @apply text-2xl text-[#222222] top-14 mr-20 ml-10 flex-wrap;
   }
 
-  .video_Overlay > .react-player{
+  .Overlay > .react-player{
      @apply !w-[40vw] !h-[50vh];
   }
 
@@ -47,11 +47,11 @@
       @apply h-[63vh] w-[90vw];
     }
 
-    .video_Overlay {
+    .Overlay {
       @apply  flex-col justify-center pr-0;
     }
   
-    .video_Overlay > .video_Details {
+    .Overlay > .video_Details {
       @apply text-xl mb-4;
     }
 
@@ -80,7 +80,7 @@
     .swiper_Slide{
       @apply !w-[80vw] !h-[40vh] m-auto;
     }  
-    .video_Overlay > .video_Details {
+    .Overlay > .video_Details {
       @apply  mb-3;
     }
   }
