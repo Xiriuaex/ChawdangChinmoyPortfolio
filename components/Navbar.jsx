@@ -57,7 +57,7 @@ const Nav = () => {
           {/* Mobile Navbar */}
           <div className='relative right-8 mobile:flex tablet:hidden'>
             <FaBars data-testid="dropdownFunction" className='text-[#ededed] w-10 h-8 mt-[4.5vh] icon_hover' onClick={toggleDropdown} />
-            <div data-testid="hidden" className={`dropdown_body ${!isOpen && "hidden"}`}>
+            <div data-testid="hidden" className={`dropdown_body z-50 ${!isOpen && "hidden"}`}>
               <ul className='flex flex-col my-5 space-y-5 ml-7'>
                 <li><Link className='dropdown_items' href={"/"}>Home</Link></li>
                 <li><Link className='dropdown_items' href={"/Mywork"}>My Work</Link></li>
