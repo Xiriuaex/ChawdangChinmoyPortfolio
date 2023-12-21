@@ -97,7 +97,7 @@
       right: 10vh;
     }
     .filter_section > .filter_buttons{
-      @apply text-[15px];
+      @apply text-[10px];
     }
 
     .close_Button { 
