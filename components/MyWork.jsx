@@ -10,7 +10,7 @@ import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow, Mousewheel } from 'swiper/modules';
 
 //Video Data Context:
-import { videoData } from '@/Data/dataContext';
+import { videoData } from '@/data/dataContext';
 
 //My Work CSS:
 import '@/styles/MyWork.css';
