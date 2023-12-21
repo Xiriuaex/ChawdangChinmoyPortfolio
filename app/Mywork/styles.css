@@ -108,7 +108,7 @@
 
   @media screen and (max-width: 540px){ 
       .video_Overlay {
-        @apply fixed w-full h-full top-0 right-0 pl-16;
+        @apply fixed w-full h-full top-0 right-0 items-center;
       }
        
   }
