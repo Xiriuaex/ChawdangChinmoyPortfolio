@@ -16,6 +16,5 @@ const nextConfig = {
     
         return config;
       },
-      basePath: '/',
     };
 module.exports = nextConfig
