@@ -16,12 +16,6 @@ const nextConfig = {
     
         return config;
       },
-      basePath: 'https://chawdangchinmoy.vercel.app/',
-      future: {
-        webpack5: true,
-      },
-      experimental: {
-        css: true,
-      },
+      basePath: '/',
     };
 module.exports = nextConfig
