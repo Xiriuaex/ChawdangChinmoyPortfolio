@@ -96,7 +96,7 @@
       left: 10vh;
       right: 10vh;
     }
-    .filter_buttons{
+    .filter_section > .filter_buttons{
       @apply text-[15px];
     }
 
