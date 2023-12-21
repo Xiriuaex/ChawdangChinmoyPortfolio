@@ -96,6 +96,9 @@
       left: 10vh;
       right: 10vh;
     }
+    .filter_buttons{
+      @apply text-[15px];
+    }
 
     .close_Button { 
       background-color: #f9f9f962;

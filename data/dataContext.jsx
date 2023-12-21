@@ -46,5 +46,11 @@ export const videoData= [
         title: 'BPKAE',
         description: 'Love can be hard',
         category: 'Short film',
+    },
+    {
+        embededCode: 'RI_W2zD19fg',
+        title: 'Superstar Entry',
+        description: '',
+        category: 'Special',
     }
 ]
