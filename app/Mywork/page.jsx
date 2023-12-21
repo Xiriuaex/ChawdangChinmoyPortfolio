@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState } from 'react';
 import ReactPlayer from 'react-player';
 
 import Nav from '@/components/Navbar';
@@ -12,9 +12,9 @@ import { videoData } from '@/data/dataContext';
 //Stylesheet:
 import "./styles.css";  
 
-const page = () => { 
+const Page = () => { 
 
-  const [videos, setvideos] = useState(videoData);
+  const [videos, setVideos] = useState(videoData);
   
   //Overlay States:
   const [showOverlay, setShowOverlay] = useState(false);
@@ -28,7 +28,7 @@ const page = () => {
     const videoByCategory = videoData.filter((newVal) => {
       return newVal.category === currCat;
     });
-    setvideos(videoByCategory);
+    setVideos(videoByCategory);
   } 
   
   //Overlay functions:
@@ -58,7 +58,7 @@ return (
                 </button> 
             ))
           }
-          <button className="filter_buttons" onClick={()=>setvideos(videoData)}>
+          <button className="filter_buttons" onClick={()=>setVideos(videoData)}>
             All
           </button>
     </div>
@@ -92,4 +92,4 @@ return (
   </div>
 )}
 
-export default page
+export default Page

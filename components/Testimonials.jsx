@@ -23,10 +23,10 @@ const Testimonials = () => {
           modules={[Navigation, Autoplay]} 
           className="mySwiper"
         >
-          <SwiperSlide> "A visual feast! The way you blend storytelling with stunning visuals is truly remarkable."</SwiperSlide>
-          <SwiperSlide>"I'm constantly amazed by the emotion your videos evoke."</SwiperSlide>
-          <SwiperSlide>"Your videos are a breath of fresh air."</SwiperSlide>
-          <SwiperSlide>"Your videos have this magical ability to transport me to different worlds. Truly captivating!"</SwiperSlide>
+          <SwiperSlide> &quot;A visual feast! The way you blend storytelling with stunning visuals is truly remarkable.&quot;</SwiperSlide>
+          <SwiperSlide>&quot;I&apos;m constantly amazed by the emotion your videos evoke.&quot;</SwiperSlide>
+          <SwiperSlide>&quot;Your videos are a breath of fresh air.&quot;</SwiperSlide>
+          <SwiperSlide>&quot;Your videos have this magical ability to transport me to different worlds. Truly captivating!&quot;</SwiperSlide>
         </Swiper>
       </div>
   </div>

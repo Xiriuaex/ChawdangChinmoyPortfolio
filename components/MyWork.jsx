@@ -64,9 +64,9 @@ const MyWork = () => {
           className='swiper_Block'
         > 
           {/* Video array mapping in the swiper */}
-            {videoData.map((vid)=>{
+            {videoData.map((vid, id)=>{
               return(
-                <SwiperSlide className='swiper_Slide'>
+                <SwiperSlide className='swiper_Slide' key={id}>
                   <img data-testid="overlay" onClick={() => openVideoOverlay(vid.embededCode, vid.title)} src={`http://img.youtube.com/vi/${vid.embededCode}/0.jpg`} alt="thumbnail-load" />
                 </SwiperSlide>  
               ) 
