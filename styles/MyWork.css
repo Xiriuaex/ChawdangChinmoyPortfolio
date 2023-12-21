@@ -22,29 +22,43 @@
   }
 
   .video_Overlay {
-    @apply fixed -top-24 left-0 w-full h-[90vh] flex pl-28 justify-center items-center bg-[#000000b3] z-50;
+    @apply fixed w-full h-full flex justify-center items-center pr-[3rem] bg-[#F3EFE0] z-50;
   }
 
   .video_Overlay > .video_Details {
-    @apply text-3xl text-[#ededed] top-16 mr-10 ml-14 flex-wrap;
+    @apply text-2xl text-[#222222] top-14 mr-20 ml-10 flex-wrap;
+  }
+
+  .video_Overlay > .react-player{
+     @apply !w-[40vw] !h-[50vh];
   }
 
   .close_Button {
-    @apply absolute top-[10px] right-[10px] text-[#ededed62] text-[20px] py-[5px] px-[15px] cursor-pointer;
+    @apply absolute top-[10px] right-[10px] text-[#222222] text-[20px] py-[5px] px-[15px] cursor-pointer;
   }
 
   .close_Button:hover{
-    @apply  text-[#ededed];
+    @apply  text-[#ff5050e6];
   }
 
 
   @media screen and (max-width: 750px){
-    
-    .video_Overlay {
-      @apply w-full flex-col;
+    .work_Section{
+      @apply h-[63vh] w-[90vw];
     }
 
+    .video_Overlay {
+      @apply  flex-col justify-center pr-0;
+    }
+  
+    .video_Overlay > .video_Details {
+      @apply text-xl mb-4;
+    }
 
+    .close_Button {
+      @apply  top-0 right-0 py-[1px] px-[13px];
+    }
+  
   }
   @media screen and (max-width: 540px) {
     .work_Section{   
@@ -66,4 +80,7 @@
     .swiper_Slide{
       @apply !w-[80vw] !h-[40vh] m-auto;
     }  
+    .video_Overlay > .video_Details {
+      @apply  mb-3;
+    }
   }

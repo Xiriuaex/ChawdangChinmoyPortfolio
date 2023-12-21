@@ -9,7 +9,7 @@ const AboutMe = () => {
             <p>ABOUT ME</p>
         </div>
         <div className="details">
-          <p className='text-justify'>I am a passionate Cinematographer Open to Create and collaborate. I have experience in trailers, short stories, music videos, aftermovies and many more. Contact me for more details.</p>
+          <p>I'm a passionate filmmaker fueled by creativity and a love for storytelling. Whether it's capturing moments on camera or piecing together narratives, I thrive on the excitement of bringing ideas to life through the art of filmmaking. Let's dive into the world of imagination and craft something extraordinary together!</p>
         </div>
     </div> 
     

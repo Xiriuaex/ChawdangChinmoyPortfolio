@@ -1,6 +1,6 @@
 
   h1 {
-    @apply text-center text-[#ededed] font-black;
+    @apply text-center text-[#ededed] font-extrabold;
   } 
 
   .heading{

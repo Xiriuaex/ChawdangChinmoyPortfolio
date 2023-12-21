@@ -1,20 +1,19 @@
 'use client'
 
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import ReactPlayer from 'react-player';
 
 import Nav from '@/components/Navbar';
 import Footer from '@/components/Footer';
 
 //Context data:
-import { DataContext } from '@/Context/dataContext';
+import { videoData } from '@/data/dataContext';
 
 //Stylesheet:
 import "./styles.css";  
 
 const page = () => { 
 
-  const { videoData } = useContext(DataContext);
   const [videos, setvideos] = useState(videoData);
   
   //Overlay States:
@@ -30,8 +29,8 @@ const page = () => {
       return newVal.category === currCat;
     });
     setvideos(videoByCategory);
-  }
-
+  } 
+  
   //Overlay functions:
   const openVideoOverlay = (videoID) => {
     setVideoID(videoID);
@@ -59,7 +58,6 @@ return (
                 </button> 
             ))
           }
-          
           <button className="filter_buttons" onClick={()=>setvideos(videoData)}>
             All
           </button>
@@ -69,7 +67,7 @@ return (
     <div className="video_Section">
       {videos.map((video, id)=>{
         return( 
-          <div onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card" key={id}> 
+          <div data-testid="openOverlay" onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card" key={id}> 
             <img key={id} src={`http://img.youtube.com/vi/${video.embededCode}/0.jpg`}  alt="thumbnail_load"/>
             <div key={id} className="video_Title">
               <div>{video.title}</div>
@@ -82,7 +80,7 @@ return (
 
     {/* Overlay playe: */}
     {showOverlay && ( 
-      <div data-aos="zoom-in" className="video_Overlay">
+      <div data-testid="overlay" data-aos="zoom-in" className="video_Overlay">
           <ReactPlayer url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
           <button className="close_Button" onClick={closeVideoOverlay}>x</button>
       </div>

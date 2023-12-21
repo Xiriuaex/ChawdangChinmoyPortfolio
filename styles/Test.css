@@ -1,6 +1,6 @@
 
   .test_Part{
-    @apply  relative w-full mt-28 flex flex-col justify-between items-center;
+    @apply text-center relative w-full mt-28 flex flex-col justify-between items-center;
   }
 
   .test_Title > p {
@@ -12,11 +12,15 @@
   }
 
   .swiper-slide {
-    @apply text-[2.5rem] bg-gradient-to-t from-[#ededed] to-[#ffffff] opacity-90 text-[#171717] rounded-3xl flex justify-center items-center;
+    @apply text-[1.5rem] px-6 bg-gradient-to-t from-[#ededed] to-[#ffffff] opacity-90 text-[#171717] rounded-3xl flex justify-center items-center;
   }
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 600px) {
     .swiper { 
       @apply h-[45vh];
+    }
+      
+    .swiper-slide {
+      @apply text-[1rem];
     }
   }

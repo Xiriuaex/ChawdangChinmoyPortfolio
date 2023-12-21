@@ -1,6 +1,6 @@
 
 import Link from 'next/link';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import ReactPlayer from 'react-player';
 
 //Swiper Js imports:
@@ -10,14 +10,13 @@ import 'swiper/css/effect-coverflow';
 import { Autoplay, EffectCoverflow, Mousewheel } from 'swiper/modules';
 
 //Video Data Context:
-import { DataContext } from '@/Context/dataContext';
+import { videoData } from '@/Data/dataContext';
 
 //My Work CSS:
 import '@/styles/MyWork.css';
 
 const MyWork = () => {
-  const { videoData } = useContext(DataContext);
-
+ 
   //Overlay controll state:
   const [showOverlay, setShowOverlay] = useState(false);
   const [videoID, setVideoID] = useState('');
@@ -41,7 +40,7 @@ const MyWork = () => {
     <div data-aos="slide-up" className='work_Section'>
       <div className='title'>
         MY WORK 
-        <Link className='hover:text-[#DA0037] text-[1rem] ml-[2.3px] mt-[4px]' href={"/Mywork"}>See All</Link> 
+        <Link className='hover:text-[#DA0037] w-16 text-[1rem] ml-[2.3px] mt-[4px]' href={"/Mywork"}>See All</Link> 
       </div>
       <div>
         {/* Swiper Component  with parameters */}
@@ -58,8 +57,7 @@ const MyWork = () => {
             depth: 300,
             modifier: 1, 
           }}     
-          loop={true}  
-          autoplay={true}
+          loop={true}   
           mousewheel={true}
           spaceBetween={1} 
           modules={[EffectCoverflow, Mousewheel, Autoplay]} 
@@ -69,7 +67,7 @@ const MyWork = () => {
             {videoData.map((vid)=>{
               return(
                 <SwiperSlide className='swiper_Slide'>
-                  <img onClick={() => openVideoOverlay(vid.embededCode, vid.title)} src={`http://img.youtube.com/vi/${vid.embededCode}/0.jpg`} alt="thumbnail-load" />
+                  <img data-testid="overlay" onClick={() => openVideoOverlay(vid.embededCode, vid.title)} src={`http://img.youtube.com/vi/${vid.embededCode}/0.jpg`} alt="thumbnail-load" />
                 </SwiperSlide>  
               ) 
             })} 
@@ -81,10 +79,10 @@ const MyWork = () => {
       {showOverlay && 
           <div data-aos="zoom-in" className="video_Overlay">
             <div className='video_Details'>{videoTitle}</div>
-            <ReactPlayer style={{marginRight:'3.5rem'}} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
+            <ReactPlayer width={'55%'} height={'80%'} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
             <button className="close_Button" onClick={closeVideoOverlay}>x</button>
           </div>
-        }
+      }
     </div>
   )}
 

@@ -10,7 +10,7 @@ import AboutMe from "@/components/AboutMe";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-
+ 
 
 //importing aos library to imply animations on scroll:
 import Aos from "aos";

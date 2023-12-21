@@ -5,7 +5,7 @@ import "@/styles/Contact.css";
 const Contact = () => {
   return ( 
       <div data-aos="slide-right" className='contact_Part'>
-        <a href = "mailto: pragyanchetia22@gmail.com">
+        <a data-testid='contact' href = "mailto: chinmoygogoi@gmail.com">
           <p className="hire_Me">
             Hire Me ➜
           </p>

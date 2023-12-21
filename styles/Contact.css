@@ -4,18 +4,12 @@
   }
 
   a > .hire_Me {
-    @apply font-semibold uppercase text-[#ededed] mobile:text-[3rem] tablet:text-[5rem] laptop:text-[8rem];
+    @apply font-medium uppercase text-[#ededed] mobile:text-[3rem] tablet:text-[5rem] laptop:text-[8rem];
   }
 
-  a > .hire_Me::before{ 
-    content: 'HIRE\00a0ME\00a0➜';
-    position:absolute;
-    background-color: #DA0037;  
-    width:0%; 
-    overflow:hidden;
-    transition:all 0.5s;
+  a > .hire_Me:hover{
+    @apply text-[#da0037] ;
+    -webkit-transition: all .2s ease-in-out;
   }
 
-  a > .hire_Me:hover:before{
-    width:54vw;
-  }
+ 

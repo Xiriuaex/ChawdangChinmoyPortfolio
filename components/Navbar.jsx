@@ -1,4 +1,3 @@
-'use client'
 
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
@@ -49,16 +48,16 @@ const Nav = () => {
           {/* Desktop/tablet Navbar */}
           <div className='mobile:hidden tablet:inline mr-[8vw] mt-[5vh]'>
             <ul className='flex flex-row space-x-8'>
-                <li><Link className='hover_Link' href={"/"}>Home</Link></li>
-                <li><Link className='hover_Link' href={"/Mywork"}>My Work</Link></li>
-                <li><Link className='hover_Link' href={"/Contact"}>Contact Me</Link></li>
+                <li><Link className='hover_Link' data-testid="home" href="/">Home</Link></li>
+                <li><Link className='hover_Link' data-testid="workRoute" href="/Mywork">My Work</Link></li>
+                <li><Link className='hover_Link' data-testid="contact" href="/Contact">Contact Me</Link></li>
             </ul>
           </div> 
 
           {/* Mobile Navbar */}
           <div className='relative right-8 mobile:flex tablet:hidden'>
-            <FaBars className='text-[#ededed] w-10 h-8 mt-[4.5vh] icon_hover' onClick={toggleDropdown} />
-            <div className={`dropdown_body ${!isOpen && "hidden"}`}>
+            <FaBars data-testid="dropdownFunction" className='text-[#ededed] w-10 h-8 mt-[4.5vh] icon_hover' onClick={toggleDropdown} />
+            <div data-testid="hidden" className={`dropdown_body ${!isOpen && "hidden"}`}>
               <ul className='flex flex-col my-5 space-y-5 ml-7'>
                 <li><Link className='dropdown_items' href={"/"}>Home</Link></li>
                 <li><Link className='dropdown_items' href={"/Mywork"}>My Work</Link></li>

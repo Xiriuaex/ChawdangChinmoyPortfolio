@@ -1,5 +1,11 @@
 
-body{
-    background-image: url("../../public/assets/bg-lens.jpg");
-    @apply bg-fixed bg-center bg-no-repeat bg-cover absolute mobile:h-[600vh] tablet:h-[380vh] laptop:h-[120vh] w-full;
+@media screen and (max-width: 1024px) {
+  .main{
+    @apply relative top-28;
   }
+}
+@media screen and (max-width: 400px) {
+  .main{
+    @apply absolute text-[10px] mt-5;
+  }
+}

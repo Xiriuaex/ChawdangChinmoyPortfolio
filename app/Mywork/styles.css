@@ -45,7 +45,8 @@
   }
 
   .video_Section > .video_Card > .video_Title > .video_Description{
-    @apply text-[20px] mt-5;
+    @apply text-[20px] mt-5 p-2;
+    word-wrap: break-word;
   }
 
   .video_Overlay {
@@ -86,8 +87,12 @@
       @apply w-full h-[38vh];
     }  
     .video_Section > .video_Card > .video_Title{
-      @apply max-w-full h-[38vh];
+      @apply max-w-full h-[38vh] text-[20px];
     }  
+
+    .video_Section > .video_Card > .video_Title > .video_Description{
+      @apply w-[80vw] text-[17px] mt-5;
+    }
   
     .video_Overlay { 
       top: 15vh;

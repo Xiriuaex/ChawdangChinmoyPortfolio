@@ -2,9 +2,8 @@
 
 import Nav from '@/components/Navbar';
 import Footer from '@/components/Footer';
- 
-import "./styles.css";
-
+  
+import "./styles.css"
 const page = () => {
 return (
   <div className='contactDiv'> 
@@ -12,7 +11,7 @@ return (
               <Nav/> 
             </div>
             <div className='relative top-[7.5rem] ml-16 text-[#e2d7f1] mobile:text-3xl tablet:text-4xl laptop:text-5xl'>CONTACT ME</div>
-            <div className="relative flex flex-row w-full h-[30vh] justify-evenly top-[11rem] text-[#e2d7f1]">
+            <div className="main relative flex flex-row w-full h-[30vh] mb-20 justify-evenly top-[11rem] text-[#e2d7f1]">
                <div className="address text-center mt-[10vh]"> 
                   <p>Visit at</p>
                   <p>Opp Chest Hosp, S R Nagar</p>

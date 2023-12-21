@@ -1,35 +1,52 @@
 
   .about_Section{
-    @apply relative h-[55vh] w-[80vw] m-auto mt-[30vh] flex flex-row justify-between items-center bg-[#ededed] text-[#171717] ;
+    @apply relative h-[55vh] w-[80vw] m-auto mt-[30vh] flex flex-row justify-between items-center bg-[#ededed] text-[#171717];
   }
 
   .about_Section > .about_Me{
-    @apply m-auto font-sans italic font-normal mobile:text-4xl tablet:text-4xl laptop:text-6xl;
+    @apply ml-10 pr-3 font-sans italic font-normal text-5xl;
   }    
   
-  .about_Section > .details{ 
-    @apply m-auto w-[40vw] text-2xl;
+  .about_Section > .details{
+    @apply text-center w-[40vw] mr-8;
+  }
+  .about_Section > .details > p{ 
+    @apply mr-9 w-[40vw] text-[20px] ;
   }
 
-  @media screen and (max-width: 540px) {
+  @media screen and (max-width: 620px) {
     .about_Section{
       @apply w-full left-0 h-[50vh] flex-col;
     } 
 
     .about_Section > .about_Me{
-      @apply mt-[25px]; 
+      @apply text-2xl mt-[25px] mx-auto pr-4; 
     }
 
     .about_Section > .details{
-      @apply w-[90vw] mb-[55px] text-xl; 
+      @apply my-auto mr-0 mt-3 w-[90vw] mb-[100px] ml-0 items-center; 
+    }
+    
+    .about_Section > .details {
+      @apply text-center text-[2px];
     }
   }
 
-  @media screen and (min-width:768px) and (max-width: 1023px) {
+  @media screen and (max-width:830px){
     .about_Section{
       @apply w-[78vw] h-[55vh];
     }
-    .about_Section > .details{ 
-      @apply mr-[15px] w-[50vw];
+
+    .about_Section > .about_Me{
+      @apply text-3xl pt-5; 
     }
+
+    .about_Section > .details{ 
+      @apply text-[14px] w-[50vw];
+    }
+
+    .about_Section > .details > p{ 
+      @apply text-[10px] w-[50vw] mr-0 mt-3;
+    }
+
   }
