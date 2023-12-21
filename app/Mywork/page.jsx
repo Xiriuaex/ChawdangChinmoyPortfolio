@@ -33,6 +33,7 @@ const Page = () => {
   
   //Overlay functions:
   const openVideoOverlay = (videoID) => {
+    console.log("clicked")
     setVideoID(videoID);
     setShowOverlay(true);
   };
@@ -78,7 +79,7 @@ return (
     {/* Overlay playe: */}
     {showOverlay && ( 
       <div data-testid="overlay" data-aos="zoom-in" className="video_Overlay">
-          <ReactPlayer url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
+          <ReactPlayer width={'80vw'} height={'80vh'} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
           <button className="close_Button" onClick={closeVideoOverlay}>x</button>
       </div>
     )}

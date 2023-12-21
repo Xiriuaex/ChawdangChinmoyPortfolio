@@ -1,4 +1,0 @@
-body{
-    @apply bg-fixed bg-center bg-no-repeat bg-cover   absolute -z-50 w-full h-[100%];
-    background-image: url('../public/use1.jpg');
-}

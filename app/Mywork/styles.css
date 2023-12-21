@@ -46,9 +46,9 @@
   }
 
   .video_Overlay {
-    @apply fixed top-[5vh] bottom-[5vh] right-[5vw] left-[5vw] bg-[#000000d5] flex justify-center items-center z-50;
+    @apply fixed top-[5vh] bottom-[5vh] right-[5vh] left-[5vh] bg-[#000000d5] flex justify-center items-center z-50;
   }
- 
+  
   .close_Button {
     @apply absolute top-[10px] right-[10px] text-[#ededed62] text-[20px] px-[9px] py-[2px] cursor-pointer;
   }
@@ -69,7 +69,6 @@
   }
 
 
-
   @media screen and (max-width: 720px) {
     .heading{
       @apply mt-6 text-5xl text-[#4e4d4d] bg-[#ededed];
@@ -82,15 +81,15 @@
     .video_Section > .video_Card > img{
       @apply w-full h-[38vh];
     }  
+
     .video_Section > .video_Card > .video_Title{
       @apply max-w-full h-[38vh] text-[20px];
     }  
 
     .video_Section > .video_Card > .video_Title > .video_Description{
       @apply w-[80vw] text-[17px] mt-5;
-    }
-  
-     
+    } 
+
     .filter_section > .filter_buttons{
       @apply text-[10px];
     }
@@ -98,7 +97,6 @@
     .close_Button { 
       background-color: #f9f9f962;
       color: #000;
-
     }
   
     .close_Button:hover { 
@@ -106,4 +104,11 @@
       color: #ff0000;
     }
   
+  }
+
+  
+  @media screen and (max-width: 550px) {
+    .video_Overlay {
+      @apply top-[8vh] bottom-[8vh];
+    }
   }
