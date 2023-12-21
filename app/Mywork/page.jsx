@@ -1,5 +1,7 @@
 'use client'
 
+//Stylesheet:
+import "./styles.css";  
 import { useState } from 'react';
 import ReactPlayer from 'react-player';
 
@@ -9,8 +11,6 @@ import Footer from '@/components/Footer';
 //Context data:
 import { videoData } from '@/data/dataContext';
 
-//Stylesheet:
-import "./styles.css";  
 
 const Page = () => { 
 

@@ -6,7 +6,7 @@
   }
 
   .heading{
-    @apply absolute mt-14 text-center text-6xl text-[#ededed];
+    @apply relative mt-24 text-center text-6xl text-[#ededed];
   }
 
   .filter_section{
