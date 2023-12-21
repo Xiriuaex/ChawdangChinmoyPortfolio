@@ -2,7 +2,8 @@ import '@/styles/globals.css';
 
 
 export const metadata= ()=> ({
-  title: 'Portfolio'
+  title: 'Portfolio',
+  description: "Welcome to the showreel..."
 }) 
 const RootLayout = ({children}) => {
   return ( 

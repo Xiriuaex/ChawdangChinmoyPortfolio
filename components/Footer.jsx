@@ -8,14 +8,14 @@ const Footer = () => {
     <div className='footer'> 
         <div className='mb-6 mt-10'>
             <p className='f_name'>ChawdangChinmoy</p>
-            <p className='f_details'>Lorem ipsum dolor sit, amet c lit.</p>
+            <p className='f_details'>an enthusiast filmmaker</p>
             <p className='f_connect'>Connect</p>
             <ul className='f_links'>
-                <li><a className='hover:text-white' href="facebook.com"><BiLogoFacebookSquare/></a></li>
-                <li><a className='hover:text-white' href="instagram.com"><BiLogoInstagramAlt/></a></li>
-                <li><a className='hover:text-white' href="linkedin.com"><BiLogoLinkedinSquare/></a></li>
+                <li><a className='hover:text-white' href="https://www.facebook.com/profile.php/?id=61552144665740"><BiLogoFacebookSquare/></a></li>
+                <li><a className='hover:text-white' href="https://www.instagram.com/freakyframes.cine?igshid=YTQwZjQ0NmI0OA=="><BiLogoInstagramAlt/></a></li>
+                <li><a className='hover:text-white' href="https://www.linkedin.com/in/chawdang-chinmoy-45ba91266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><BiLogoLinkedinSquare/></a></li>
             </ul>
-            <p className='f_designer'>Designed by Xiraex</p>
+            <p className='f_designer'>Designed by 106</p>
             <p className='f_copyright'>&copy;ChawdandChinmoy2023</p>
         </div>
     </div>
