@@ -90,12 +90,7 @@
       @apply w-[80vw] text-[17px] mt-5;
     }
   
-    .video_Overlay { 
-      top: 10vh;
-      bottom: 10vh;
-      left: 10vh;
-      right: 10vh;
-    }
+     
     .filter_section > .filter_buttons{
       @apply text-[10px];
     }
