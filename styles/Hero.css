@@ -4,12 +4,12 @@
   } 
 
   .heading{
-    @apply absolute top-[45vh] w-full z-50;
+    @apply absolute top-[45vh] w-full z-0;
   }
 
   @media screen and (max-width: 600px) {
     .heading{
-      @apply absolute top-[30vh] w-full z-50;
+      @apply top-[30vh];
     }
     .hero{
       @apply h-[80vh];
