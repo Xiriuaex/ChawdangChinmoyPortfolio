@@ -49,8 +49,7 @@ const Nav = () => {
           <div className='mobile:hidden tablet:inline mr-[8vw] mt-[5vh]'>
             <ul className='flex flex-row space-x-8'>
                 <li><Link className='hover_Link' data-testid="home" href="/">Home</Link></li>
-                <li><Link className='hover_Link' data-testid="workRoute" href="/Mywork">My Work</Link></li>
-                <li><Link className='hover_Link' data-testid="contact" href="/Contact">Contact Me</Link></li>
+                <li><Link className='hover_Link' data-testid="workRoute" href="/Mywork">My Work</Link></li> 
             </ul>
           </div> 
 
@@ -61,7 +60,6 @@ const Nav = () => {
               <ul className='flex flex-col my-5 space-y-5 ml-7'>
                 <li><Link className='dropdown_items' href={"/"}>Home</Link></li>
                 <li><Link className='dropdown_items' href={"/Mywork"}>My Work</Link></li>
-                <li><Link className='dropdown_items' href={"/Contact"}>Contact Me</Link></li>
               </ul>
             </div>
           </div>
