@@ -4,7 +4,7 @@
   }
 
   a > .hire_Me {
-    @apply font-medium uppercase text-[#ededed] mobile:text-[1.5rem] tablet:text-[4rem] laptop:text-[6rem];
+    @apply font-medium uppercase text-[#ededed] mobile:text-[2.4rem] tablet:text-[4rem] laptop:text-[6rem];
   }
 
   a > .hire_Me:hover{
