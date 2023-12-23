@@ -1,5 +1,5 @@
 import '@/styles/globals.css'; 
-
+import { Analytics } from '@vercel/analytics/react';
 
 export const metadata= ()=> ({
   title: 'Portfolio',
@@ -11,6 +11,7 @@ const RootLayout = ({children}) => {
       <html lang="en">
         <body> 
           {children} 
+          <Analytics />
         </body>
       </html>
     
