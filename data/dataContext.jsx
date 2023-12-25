@@ -42,12 +42,6 @@ export const videoData= [
         category: 'Music video',
     },
     {
-        embededCode: 'BZz4XOhulcE',
-        title: 'BPKAE',
-        description: 'Love can be hard',
-        category: 'Short film',
-    },
-    {
         embededCode: 'RI_W2zD19fg',
         title: 'Superstar Entry',
         description: '',
