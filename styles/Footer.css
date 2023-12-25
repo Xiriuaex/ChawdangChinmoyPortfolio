@@ -21,7 +21,7 @@
     }
 
     .f_designer{
-        @apply mt-4 text-[13px] text-center hover:content:"contact!"';
+        @apply mt-4 text-[13px] text-center;
     }
 
     .f_copyright{
