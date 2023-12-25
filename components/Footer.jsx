@@ -15,7 +15,7 @@ const Footer = () => {
                 <li><a className='hover:text-white' href="https://www.instagram.com/freakyframes.cine?igshid=YTQwZjQ0NmI0OA=="><BiLogoInstagramAlt/></a></li>
                 <li><a className='hover:text-white' href="https://www.linkedin.com/in/chawdang-chinmoy-45ba91266?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><BiLogoLinkedinSquare/></a></li>
             </ul>
-            <p className='f_designer'>Designed by <a href = "mailto: pragyanchetia22@gmail.com?subject=For Work Purpose"><span className='hover:content:"contact!"'>106</span></a></p>
+            <p className='f_designer'>Designed by <a href = "mailto: pragyanchetia22@gmail.com?subject=For Work Purpose"><span className='hover::content-["contact!"]'>106</span></a></p>
             <p className='f_copyright'>&copy;ChawdandChinmoy2023</p>
         </div>
     </div>
