@@ -52,7 +52,7 @@
     }
   
     .Overlay > .video_Details {
-      @apply text-xl mb-4;
+      @apply m-auto text-xl mb-4;
     }
 
     .close_Button {

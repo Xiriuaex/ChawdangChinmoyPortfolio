@@ -6,11 +6,11 @@
   } 
 
   .filter_section{
-    @apply space-x-5 mt-10 pl-12;
+    @apply flex flex-row justify-center flex-wrap items-center mt-10;
   }
 
   .filter_section > .filter_buttons{
-    @apply px-5 border-b-[2px] border-[#ededed] text-[#ededed] text-[20px];
+    @apply px-7 border-b-[2px] border-[#ededed] text-[#ededed] text-[22px] mb-4;
   }
 
   .filter_section > .filter_buttons:hover{
@@ -91,7 +91,7 @@
     } 
 
     .filter_section > .filter_buttons{
-      @apply text-[10px];
+      @apply text-[18px];
     }
 
     .close_Button { 

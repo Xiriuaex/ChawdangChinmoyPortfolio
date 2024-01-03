@@ -78,9 +78,11 @@ const MyWork = () => {
       {/* If ShowOverlay is true then Video Overlay will open */}
       {showOverlay && 
           <div data-aos="zoom-in" className="Overlay">
-            <div className='video_Details'>{videoTitle}</div>
-            <ReactPlayer width={'55%'} height={'80%'} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
             <button className="close_Button" onClick={closeVideoOverlay}>x</button>
+            <div className='video_Details'>{videoTitle}</div>
+            <div className='video_inner flex flex-col justify-center items-center w-[160vw] h-[50vh] aspect-video'>
+              <ReactPlayer width={'55%'} height={'80%'} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
+            </div>
           </div>
       }
     </div>

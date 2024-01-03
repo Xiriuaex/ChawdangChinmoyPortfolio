@@ -79,7 +79,7 @@ return (
     {/* Overlay playe: */}
     {showOverlay && ( 
       <div data-testid="overlay" data-aos="zoom-in" className="video_Overlay">
-          <ReactPlayer width={'70vw'} height={'60vh'} style={{margin:"auto"}} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
+          <ReactPlayer width={'70vw'} height={'60vh'} style={{margin:"auto", aspectRatio:16/9}} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
           <button className="close_Button" onClick={closeVideoOverlay}>x</button>
       </div>
     )}
