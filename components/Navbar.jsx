@@ -28,7 +28,7 @@ const Nav = () => {
     return () => {
        window.removeEventListener('scroll', controlNavbar);
     };
-  }, [lastScrollY]);
+  }, [lastScrollY, controlNavbar]);
 
   
   //state of the dropdown:
