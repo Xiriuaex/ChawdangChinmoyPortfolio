@@ -34,7 +34,7 @@
 
   @media screen and (max-width:830px){
     .about_Section{
-      @apply w-[78vw] h-[55vh];
+      @apply w-[100%] h-[55vh];
     }
 
     .about_Section > .about_Me{
@@ -42,11 +42,11 @@
     }
 
     .about_Section > .details{ 
-      @apply text-[14px] w-[50vw];
+      @apply w-[50vw];
     }
 
     .about_Section > .details > p{ 
-      @apply text-[10px] w-[50vw] mr-0 mt-3;
+      @apply text-[13px] w-[50vw] mr-0 mt-3;
     }
 
   }
