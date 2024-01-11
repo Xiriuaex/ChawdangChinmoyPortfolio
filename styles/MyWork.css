@@ -77,6 +77,10 @@
     .close_Button {
       @apply  top-0 right-0 py-[1px] px-[13px];
     }
+
+    .Overlay > .video_inner{
+      @apply  w-[100%] h-[70%] ;
+    } 
   
   }
   @media screen and (max-width: 540px) {
@@ -111,4 +115,8 @@
     .Overlay > .video_Details {
       @apply text-3xl mb-3;
     }
+    
+    .Overlay > .video_inner{
+      @apply  w-[90%] h-[60%] ;
+    } 
   }
