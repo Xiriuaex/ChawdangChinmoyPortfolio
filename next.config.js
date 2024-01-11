@@ -1,5 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: true, 
+    images: {
+      domains: ['img.youtube.com'],
+      formats: ['image/webp'],
+    },
     webpack(config, { isServer }) {
         const prefix = config.assetPrefix ?? config.basePath ?? '';
         config.module.rules.push({

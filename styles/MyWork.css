@@ -1,37 +1,41 @@
 
 
   .work_Section{
-    @apply relative h-[55vh] mx-auto w-[80vw] mt-32 flex flex-row justify-between items-center bg-[#ededed];
+    @apply relative mx-auto h-[55vh] w-[80vw] mt-32 flex flex-row justify-between items-center bg-[#ededed];
   }
 
-  .work_Section > .title {
-    @apply flex flex-col font-sans italic font-normal ml-[4%] text-[#171717] mobile:text-4xl laptop:text-6xl;
-  }
- 
- 
-  img{
-    @apply w-[37vw] h-[40vh];
-  }
-    
-  .swiper_Block{
-    @apply !w-[50vw] !h-[55vh];
+  .titleSection {
+    @apply  w-[25%] ml-8 flex flex-col justify-center items-center;
   }
 
-  .swiper_Slide{
-    @apply !w-[37vw] !h-[40vh] m-auto;
+  .work_Section > .titleSection > .work_title {
+    @apply mt-[20%]  flex flex-col font-sans italic font-normal text-[#171717] mobile:text-4xl laptop:text-5xl;
   }
 
-  .Overlay {
-    @apply fixed w-full h-full flex justify-center items-center pr-[3rem] bg-[#F3EFE0] z-50;
+  .thumbnailEffect {
+    @apply flex flex-row gap-2 w-[70%] items-center justify-center;
+  }
+
+  .thumbnailEffect > img {
+    @apply flex flex-row w-[12%] h-[260px] border-[2.5px] border-solid border-[#adadad] aspect-video object-cover;
+    transition: all ease .5s;
+  } 
+
+  .thumbnailEffect > img:hover {
+      @apply w-[45%] scale-105;
+  }  
+
+ .Overlay {
+    @apply fixed w-full h-full flex justify-center items-center bg-[#F3EFE0] z-50;
   }
 
   .Overlay > .video_Details {
-    @apply text-2xl text-[#222222] top-14 mr-20 ml-10 flex-wrap;
+    @apply text-3xl text-[#222222] absolute top-4 flex-wrap;
   }
 
-  .Overlay > .react-player{
-     @apply !w-[40vw] !h-[50vh];
-  }
+  .Overlay > .video_inner{
+    @apply flex flex-row justify-center items-end w-[100%] h-[90%] aspect-video;
+  } 
 
   .close_Button {
     @apply absolute top-[10px] right-[10px] text-[#222222] text-[20px] py-[5px] px-[15px] cursor-pointer;
@@ -47,12 +51,27 @@
       @apply h-[63vh] w-[90vw];
     }
 
+    .work_Section > .titleSection > .work_title {
+      @apply w-32;
+    }
+
+    .thumbnailEffect {
+      @apply w-[70%];
+    }
+    .thumbnailEffect > img {
+      @apply w-[10%] h-[180px];
+    } 
+
+    .thumbnailEffect > img:hover {
+      @apply w-[45%];
+    } 
+
     .Overlay {
       @apply  flex-col justify-center pr-0;
     }
   
     .Overlay > .video_Details {
-      @apply m-auto text-xl mb-4;
+      @apply m-auto text-3xl mb-4;
     }
 
     .close_Button {
@@ -62,25 +81,34 @@
   }
   @media screen and (max-width: 540px) {
     .work_Section{   
-      @apply h-[65vh] mt-[20vh] overflow-hidden w-full flex-col;
+      @apply h-[65vh] mt-[20vh] w-full flex-col;
+    } 
+    
+    .work_Section > .titleSection{
+      margin-left: 0;
+    }
+
+    .work_Section > .titleSection > .work_title {
+      @apply ml-0 w-60 text-center;
+    }
+
+    .thumbnailEffect {
+      @apply mb-8;
+    }
+
+    .thumbnailEffect > img {
+      @apply w-[14%] h-[180px];
     } 
 
-    .work_Section > .title {
+    .thumbnailEffect > img:hover {
+      @apply w-[60%];
+    } 
+
+    .work_Section > .work_title {
       @apply mt-[16px];
     }
-
-    img{
-      @apply w-[80vw] h-[40vh];
-    }
-      
-    .swiper_Block{
-      @apply !w-[80vw] !h-[40vh] mb-[15px];
-    }
-  
-    .swiper_Slide{
-      @apply !w-[80vw] !h-[40vh] m-auto;
-    }  
+    
     .Overlay > .video_Details {
-      @apply  mb-3;
+      @apply text-3xl mb-3;
     }
   }

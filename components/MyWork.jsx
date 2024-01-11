@@ -14,6 +14,7 @@ import { videoData } from '@/data/dataContext';
 
 //My Work CSS:
 import '@/styles/MyWork.css';
+import Image from 'next/image';
 
 const MyWork = () => {
  
@@ -38,49 +39,33 @@ const MyWork = () => {
 
   return (
     <div data-aos="slide-up" className='work_Section'>
-      <div className='title'>
-        MY WORK 
-        <Link className='hover:text-[#DA0037] w-16 text-[1rem] ml-[2.3px] mt-[4px]' href={"/Mywork"}>See All</Link> 
+      <div className='titleSection'>
+        <p className='work_title'>MY WORK</p>
+        <Link className='hover:text-[#DA0037] text-center w-16 text-[1rem] ml-[2.3px] mt-[4px]' href={"/Mywork"}>See All</Link> 
       </div>
-      <div>
-        {/* Swiper Component  with parameters */}
-        <Swiper
-          effect={'coverflow'} 
-          direction='vertical' 
-          grabCursor={true}
-          centeredSlides={true}
-          slideToClickedSlide={false}
-          slidesPerView={'auto'}   
-          coverflowEffect={{
-            rotate: 45,
-            stretch: 0,
-            depth: 300,
-            modifier: 1, 
-          }}     
-          loop={true}   
-          mousewheel={true}
-          spaceBetween={1} 
-          modules={[EffectCoverflow, Mousewheel, Autoplay]} 
-          className='swiper_Block'
-        > 
-          {/* Video array mapping in the swiper */}
-            {videoData.map((vid, id)=>{
-              return(
-                <SwiperSlide className='swiper_Slide' key={id}>
-                  <img data-testid="overlay" onClick={() => openVideoOverlay(vid.embededCode, vid.title)} src={`http://img.youtube.com/vi/${vid.embededCode}/0.jpg`} alt="thumbnail-load" />
-                </SwiperSlide>  
+      <div className='thumbnailEffect'>
+        {videoData.slice(1, 6).map((vid, id)=>{
+              const videoSrc = `http://img.youtube.com/vi/${vid.embededCode}/0.jpg`;
+              return( 
+                  <Image
+                    width={150}
+                    height={260}
+                    data-testid="overlay" 
+                    key={id} 
+                    onClick={() => openVideoOverlay(vid.embededCode, vid.title)} 
+                    src={videoSrc} 
+                    alt="thumbnail-load" 
+                  />  
               ) 
-            })} 
-        </Swiper>
-        
+            })}
       </div>
 
-      {/* If ShowOverlay is true then Video Overlay will open */}
-      {showOverlay && 
+       {/* If ShowOverlay is true then Video Overlay will open */}
+       {showOverlay && 
           <div data-aos="zoom-in" className="Overlay">
             <button className="close_Button" onClick={closeVideoOverlay}>x</button>
             <div className='video_Details'>{videoTitle}</div>
-            <div className='video_inner flex flex-col justify-center items-center w-[160vw] h-[50vh] aspect-video'>
+            <div className='video_inner'>
               <ReactPlayer width={'55%'} height={'80%'} url={`https://www.youtube.com/embed/${videoID}`} light playing controls/>
             </div>
           </div>
