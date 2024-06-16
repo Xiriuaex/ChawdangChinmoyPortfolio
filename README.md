@@ -1,4 +1,4 @@
-Open http://localhost:3000 with your browser to see the result.
+
 
 This project is being continued after a long break.
 
