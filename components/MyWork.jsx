@@ -3,12 +3,6 @@ import Link from 'next/link';
 import { useState } from 'react';
 import ReactPlayer from 'react-player';
 
-//Swiper Js imports:
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import { Autoplay, EffectCoverflow, Mousewheel } from 'swiper/modules';
-
 //Video Data Context:
 import { videoData } from '@/data/dataContext';
 
@@ -43,19 +37,21 @@ const MyWork = () => {
         <p className='work_title'>MY WORK</p>
         <Link className='hover:text-[#DA0037] text-center w-16 text-[1rem] ml-[2.3px] mt-[4px]' href={"/Mywork"}>See All</Link> 
       </div>
-      <div className='thumbnailEffect'>
+      <div className='thumbnailEffect relative'>
         {videoData.slice(1, 6).map((vid, id)=>{
               const videoSrc = `http://img.youtube.com/vi/${vid.embededCode}/0.jpg`;
               return( 
-                  <Image
+                <>
+                   <Image
                     width={150}
                     height={260}
                     data-testid="overlay" 
-                    key={id} 
+                    key={id}
                     onClick={() => openVideoOverlay(vid.embededCode, vid.title)} 
                     src={videoSrc} 
                     alt="thumbnail-load" 
-                  />  
+                  />
+                </>
               ) 
             })}
       </div>
