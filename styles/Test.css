@@ -21,6 +21,6 @@
     }
       
     .swiper-slide {
-      @apply text-[1rem];
+      @apply text-[1.2rem] pt-24;
     }
   }

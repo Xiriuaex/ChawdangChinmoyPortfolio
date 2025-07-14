@@ -1,3 +1,4 @@
+"use client"
 
 import Link from 'next/link';
 import { useState } from 'react';
@@ -41,17 +42,16 @@ const MyWork = () => {
         {videoData.slice(1, 6).map((vid, id)=>{
               const videoSrc = `http://img.youtube.com/vi/${vid.embededCode}/0.jpg`;
               return( 
-                <>
+                <div key={id}>
                    <Image
                     width={150}
                     height={260}
                     data-testid="overlay" 
-                    key={id}
                     onClick={() => openVideoOverlay(vid.embededCode, vid.title)} 
                     src={videoSrc} 
                     alt="thumbnail-load" 
                   />
-                </>
+                </div>
               ) 
             })}
       </div>

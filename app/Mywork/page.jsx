@@ -10,6 +10,7 @@ import Footer from '@/components/Footer';
 
 //Context data:
 import { videoData } from '@/data/dataContext';
+import Image from "next/image";
 
 
 const Page = () => { 
@@ -65,9 +66,9 @@ return (
     <div className="video_Section">
       {videos.map((video, id)=>{
         return( 
-          <div data-testid="openOverlay" onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card" key={id}> 
-            <img key={id} src={`http://img.youtube.com/vi/${video.embededCode}/0.jpg`}  alt="thumbnail_load"/>
-            <div key={id} className="video_Title">
+          <div key={id} data-testid="openOverlay" onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card" key={id}> 
+            <Image src={`http://img.youtube.com/vi/${video.embededCode}/0.jpg`}  alt="thumbnail_load"/>
+            <div className="video_Title">
               <div>{video.title}</div>
               <div className='video_Description'>{video.description}</div>
             </div>
