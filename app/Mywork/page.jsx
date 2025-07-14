@@ -66,7 +66,7 @@ return (
     <div className="video_Section">
       {videos.map((video, id)=>{
         return( 
-          <div key={id} data-testid="openOverlay" onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card" key={id}> 
+          <div key={id} data-testid="openOverlay" onClick={()=>openVideoOverlay(video.embededCode)}  className="video_Card"> 
             <Image src={`http://img.youtube.com/vi/${video.embededCode}/0.jpg`}  alt="thumbnail_load"/>
             <div className="video_Title">
               <div>{video.title}</div>
