@@ -12,7 +12,7 @@
   }
 
   .swiper-slide {
-    @apply text-[1.5rem] px-6 bg-gradient-to-t from-[#ededed] to-[#ffffff] opacity-90 text-[#171717] rounded-3xl flex justify-center items-center;
+    @apply text-[1.5rem] px-6 pt-28 bg-gradient-to-t from-[#ededed] to-[#ffffff] opacity-90 text-[#171717] rounded-3xl flex justify-center items-center;
   }
 
   @media screen and (max-width: 600px) {
